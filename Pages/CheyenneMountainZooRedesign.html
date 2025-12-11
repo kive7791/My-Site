@@ -218,7 +218,7 @@
                             redirects
                             to third-party systems. I also needed to re-familiarize myself with Figma after a
                             significant
-                            break, which required rebuilding my design workflow while executing the project.
+                            break.
                         </p>
                     </div>
                 </div>
@@ -298,7 +298,7 @@
                 </figure>
                 <p>
                     I aimed to design a ticketing process with fewer steps, fewer clicks, and no redirections. Inspired
-                    by modern movie-ticketing flows such as AMC, I structured a linear and predictable user path from
+                    by modern movie-ticketing flows such as AMC, I structured a predictable user path from
                     ticket selection to checkout. This direction reflected feedback from the initial user study, where
                     participants expressed a preference for familiar and direct ticketing patterns.
                 </p>
@@ -433,7 +433,7 @@
                 <p>
                     During the mid-fidelity phase, I refined spacing, corrected grid alignment issues, and introduced
                     important interaction details and state changes for selected versus unselected
-                    options. These updates made the flow more realistic and exposed additional opportunities to clarify
+                    options. These updates made the flow more realistic, while exposing some opportunities to clarify
                     content hierarchy.
                 </p>
 
@@ -507,12 +507,12 @@
                 </div>
 
                 <p>
-                    In the high-fidelity stage, I introduced final imagery, refined the color palette to meet WCAG AA
+                    In the high-fidelity phase, I introduced final imagery, refined the color palette to meet WCAG AA
                     contrast standards, and improved spacing for legibility. I also removed unnecessary boxy elements
                     and
-                    replaced quantity controls with more intuitive inputs. Feedback from users directly informed
+                    replaced quantity controls with more intuitive actions. Feedback from users directly informed
                     these
-                    interaction and visual refinements.
+                    redesign measures including the visual refinements.
                 </p>
 
                 <!-- High Fidelity Prototype Link -->
@@ -520,8 +520,7 @@
                 <p>
                     The final prototype combines a clearer information hierarchy, accessible color usage, and a more
                     focused interaction model. Back buttons, descriptive labels, and consistent button styles support a
-                    predictable experience, while imagery and video content preserve the zoo’s sense of place and
-                    personality.
+                    predictable experience, while imagery and video content preserve the zoo’s personality.
                 </p>
                 <a href="https://www.figma.com/proto/dSl4DfKUQK8tEVe5p8yqp6/Kira-s-UX1-Fall-2025-Figma-File-Template?node-id=2177-454&p=f&t=p19FcOJHQ8ZwO298-1&scaling=min-zoom&content-scaling=fixed&page-id=2177%3A444&starting-point-node-id=2177%3A454"
                     target="_blank" class="btn btn-primary">View Interactive Prototype</a>
@@ -538,7 +537,7 @@
                     In response, I refined the color system to meet AA contrast guidelines, defined primary and
                     secondary
                     button styles, reduced unnecessary framing, and corrected layout inconsistencies. These changes
-                    substantially improved both accessibility and the overall polish of the interface.
+                    improved both accessibility and the overall polish of the interface.
                 </p>
 
                 <!-- Before & After side by side -->
@@ -564,6 +563,68 @@
                 </div>
             </section>
 
+            <!-- Evaluation and results -->
+            <section class="mb-5" id="research">
+                <h2 class="h3 mb-3">Evaluation and results</h2>
+
+                <h3 class="h5">User testing process and &amp; Pain Points</h3>
+                <p>
+                    I conducted usability testing with three participants using the updated high-fidelity prototype.
+                    Their feedback revealed several areas needing improvement. The most consistent concern involved
+                    visual clarity. Users noted that the original color palette was too dark, resulting in poor
+                    contrast and reduced readability, especially for smaller text elements. Participants also
+                    identified interaction inconsistencies, including squished or unclear buttons, oversized icons,
+                    and navigation that required clicking instead of intuitive hover behavior. Layout concerns were
+                    also observed, such as misaligned content, overly dense boxed sections, and compressed calendar
+                    elements that made information harder to interpret. Additionally, multiple users expected a
+                    dedicated “Tickets” information page and were confused by its absence.
+                </p>
+
+                <h3 class="" h5">Updates Made Based on User Feedback</h3>
+                <p>
+                    Based on these findings, I implemented some improvements to strengthen the visual hierarchy
+                    and usability of the final design. I refined the color palette to increase contrast and ensure
+                    WCAG-compliant accessibility, updated the alignment and spacing of key components, and removed
+                    unnecessary box elements to reduce visual clutter. I also standardized button styles, improved
+                    the clarity of the “Get Tickets” call-to-action, and adjusted icon sizes for better consistency
+                    across screens.
+                </p>
+                <p>
+                    While time constraints prevented me from adding the requested dedicated ticket-information page or
+                    updating the video-player interactions, these remain important opportunities for future redesign efforts.
+                    The completed updates significantly improved readability, interaction clarity, and overall
+                    cohesiveness in the final prototype.
+                </p>
+
+                <!-- Evaluation and results Images Row -->
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <figure class="figure">
+                            <img src="../Assets/eval/participantA.png" class="figure-img img-fluid rounded"
+                                alt="Screenshot of original Cheyenne Mountain Zoo ticketing system">
+                            <figcaption class="figure-caption">
+                                User feedback homepage - issues with the heavy brown color palette,
+                                excess boxed sections, and the lack of auto-playing videos or clear indicators.
+                                Participants also expected the “Tickets” navigation link to lead to a dedicated
+                                ticket-information page.
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-6">
+                        <figure class="figure">
+                            <img src="../Assets/eval/participantA.png" class="figure-img img-fluid rounded"
+                                alt="Updated navigation bar including direct Get Tickets button">
+                            <figcaption class="figure-caption">
+                                User feedback extended tickets bar - confusion around the “Get Tickets”
+                                button, including unclear styling and expectations that it should lead to a dedicated
+                                ticket page.
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+
             <!-- REFLECTION -->
             <section class="mb-5" id="reflection">
                 <h2 class="h3 mb-3">Reflection</h2>
@@ -583,24 +644,19 @@
                 <!-- Conclusion -->
                 <h3 class="h5 mt-3">Conclusion</h3>
                 <p>
-                    This project reinforced how strongly information architecture, visual hierarchy, and interaction
-                    design
-                    influence a user’s confidence in completing a task. By simplifying the flow, clarifying navigation,
-                    and applying consistent visual patterns, the redesigned experience significantly reduces cognitive
-                    load for visitors purchasing tickets. Working through several fidelity levels, combined with
-                    structured
-                    usability testing, helped me identify and address subtle issues that were not obvious in the initial
-                    concept.
+                    This project reinforced how strongly visual hierarchy, and interaction
+                    design influence a user’s confidence in completing a task. By simplifying the flow, clarifying
+                    navigation,
+                    and applying consistent visual patterns, the redesigned reduces cognitive load for visitors
+                    purchasing tickets.
+                    Working through several fidelity levels, combined with structured usability testing,
+                    helped me identify and address subtle issues that were not obvious in the initial wireframe.
                 </p>
                 <p>
-                    The work also deepened my understanding of accessibility and design systems. Iterating on the color
-                    palette to meet WCAG AA standards, refining grid usage, and defining button roles all contributed to
-                    a
-                    more robust and scalable foundation for future enhancements. Overall, this case study strengthened
-                    my
-                    skills in end-to-end UX design from research and problem definition through to prototyping,
-                    evaluation,
-                    and reflection.
+                    The work also deepened my understanding of accessibility and design systems. Overall, this case
+                    study strengthened
+                    my skills in end-to-end UX design from research and problem definition through to prototyping,
+                    evaluation, and reflection.
                 </p>
             </section>
         </div>
