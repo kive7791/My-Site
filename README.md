@@ -14,7 +14,7 @@ This website is a personal introduction that gives visitors a glimpse into who I
 - Integrated email link for contact
 
 ## Live Demo
-maybe
+Link: https://kive7791.github.io/My-Site/Pages/Homepage.html 
 
 ## Author (Me)
 Kira Velez
