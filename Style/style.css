@@ -184,3 +184,16 @@ header.bg-light strong {
 #heroCarousel .carousel-caption {
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
 }
+
+/* =========================
+   Thubnail Controls
+   ========================= */
+
+.case-thumb {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.case-thumb:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
