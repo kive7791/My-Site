@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Settings in app vs web survey</title>
+    <title>Settings in-app vs. web redirection study</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -50,117 +50,119 @@
     <!-- HERO / COVER SECTION -->
     <header class="py-5 bg-light border-bottom">
         <div class="container">
-            <button class="btn btn-secondary mb-4" onclick="history.back()">&#8592; Back to STARZ internship overview</button>
-            <div class="row align-items-center">
+            <button class="btn btn-secondary mb-4" onclick="history.back()">&#8592; Back to STARZ internship
+                overview</button>
 
+            <div class="row align-items-center g-4">
                 <!-- Text -->
-                <div class="col-lg-6">
-                    <h1 class="display-5 fw-bold">Settings in app vs web survey</h1>
+                <div class="col-lg-5">
+                    <h1 class="display-5 fw-bold">Settings: In-app vs. web redirection</h1>
+
                     <p class="lead mt-3">
-                        This project focused on redesigning the Cheyenne Mountain Zoo’s online ticket-purchasing
-                        experience. The previous interface was text-heavy, difficult to navigate, and created
-                        unnecessary friction for visitors planning their trips. The final outcome is a streamlined,
-                        modernized prototype that enhances clarity, usability, and efficiency throughout the purchase
-                        flow.
+                        This unmoderated usability study evaluated whether users preferred managing account settings
+                        inside the STARZ mobile app or being redirected to a mobile web experience. I measured task
+                        success, time on task, and qualitative feedback to identify friction points and inform product
+                        recommendations.
                     </p>
+
                     <p class="mb-0">
-                        <strong>Role:</strong> Sole UX Researcher &amp; Designer<br>
-                        <strong>Responsibilities:</strong> Usability testing, problem definition, task flow development,
-                        wireframing, and high-fidelity prototyping.
+                        <strong>Role:</strong> UX Researcher<br>
+                        <strong>Responsibilities:</strong> Study planning, question development, unmoderated usability
+                        testing (UserZoom), participant task analysis, documentation, reporting, and stakeholder
+                        presentation.
                     </p>
                 </div>
 
-                <!-- Hero Carousel -->
-                <div class="col-lg-6 mt-4 mt-lg-0">
-                    <div id="heroCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                <!-- Quote "Carousel" -->
+                <div class="col-lg-7">
+                    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
-                                aria-current="true" aria-label="Slide 1"></button>
+                                aria-current="true" aria-label="Quote 1"></button>
                             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
+                                aria-label="Quote 2"></button>
                             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
+                                aria-label="Quote 3"></button>
                             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"
-                                aria-label="Slide 4"></button>
-                            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"
-                                aria-label="Slide 5"></button>
-                            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="5"
-                                aria-label="Slide 6"></button>
-                            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="6"
-                                aria-label="Slide 7"></button>
-                            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="7"
-                                aria-label="Slide 8"></button>
+                                aria-label="Quote 4"></button>
                         </div>
 
                         <div class="carousel-inner">
+                            <!-- Slide 1 -->
                             <div class="carousel-item active">
-                                <img src="../Assets/project_intro/Low_Fid_1.png" class="d-block w-100"
-                                    alt="Low-fidelity wireframe of ticket selection page">
-                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                                    <h5>Low Fidelity</h5>
-                                    <p>Early sketch exploring hierarchy and basic layout.</p>
+                                <div class="quote-slide">
+                                    <blockquote>
+                                        “It doesn’t make sense that I can’t just make changes within the app and that it
+                                        takes me to my web browser.”
+                                    </blockquote>
+                                    <div class="quote-attrib">Participant feedback (Task 1)</div>
+
+                                    <div class="carousel-caption quote-caption">
+                                        <div class="caption-card">
+                                            <strong>Impact:</strong> Redirection created “context switching” friction
+                                            and
+                                            reduced perceived control. This directly supported recommending a more
+                                            in-app settings experience (or a reduced-redirection approach).
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
+                            <!-- Slide 2 -->
                             <div class="carousel-item">
-                                <img src="../Assets/project_intro/Low_Fid_2.png" class="d-block w-100"
-                                    alt="Low-fidelity wireframe of date and time selection page">
-                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                                    <h5>Low Fidelity</h5>
+                                <div class="quote-slide">
+                                    <blockquote>
+                                        “You can lose track of where you are.”
+                                    </blockquote>
+                                    <div class="quote-attrib">Participant feedback (Task 1)</div>
+
+                                    <div class="carousel-caption quote-caption">
+                                        <div class="caption-card">
+                                            <strong>Impact:</strong> Even when users could complete tasks, the app to
+                                            web
+                                            handoff increased disorientation. Recommendation: reduce handoffs and make
+                                            the state change unmistakable and recoverable (clear back path, consistent
+                                            UI cues).
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
+                            <!-- Slide 3 -->
                             <div class="carousel-item">
-                                <img src="../Assets/project_intro/Mid_Fid_1.png" class="d-block w-100"
-                                    alt="Mid-fidelity homepage wireframe">
-                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                                    <h5>Mid Fidelity – Homepage</h5>
-                                    <p>Refined grid, navigation, and planning-a-visit content.</p>
+                                <div class="quote-slide">
+                                    <blockquote>
+                                        “It kept jumping to my browser while I was trying to update the email.”
+                                    </blockquote>
+                                    <div class="quote-attrib">Participant feedback (Task 1)</div>
+
+                                    <div class="carousel-caption quote-caption">
+                                        <div class="caption-card">
+                                            <strong>Impact:</strong> The redirect broke the “single flow” mental model.
+                                            Recommendation: prioritize a unified path (in-app) or improve continuity
+                                            (auto-login / seamless handoff) to keep users moving.
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
+                            <!-- Slide 4 -->
                             <div class="carousel-item">
-                                <img src="../Assets/project_intro/Mid_Fid_2.png" class="d-block w-100"
-                                    alt="Mid-fidelity ticket selection wireframe">
-                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                                    <h5>Mid Fidelity – Date &amp; Time</h5>
-                                    <p>Improved layout for calendar and entry times.</p>
-                                </div>
-                            </div>
+                                <div class="quote-slide">
+                                    <blockquote>
+                                        “The account here is fine, but if I’m going to subscription management, I don’t
+                                        think
+                                        offers should be above my actual plan… that confuses me.”
+                                    </blockquote>
+                                    <div class="quote-attrib">Participant feedback (Task 3)</div>
 
-                            <div class="carousel-item">
-                                <img src="../Assets/project_intro/Mid_Fid_3.png" class="d-block w-100"
-                                    alt="Mid-fidelity date and time wireframe">
-                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                                    <h5>Mid Fidelity – Ticket Selection</h5>
-                                    <p>Clearer typography and spacing for ticket quantities.</p>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <img src="../Assets/project_intro/High_Fid_1.png" class="d-block w-100"
-                                    alt="High-fidelity homepage hero and events">
-                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                                    <h5>High Fidelity – Homepage</h5>
-                                    <p>Updated hero and events section reflecting user feedback.</p>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <img src="../Assets/project_intro/High_Fid_2.png" class="d-block w-100"
-                                    alt="High-fidelity tickets page">
-                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                                    <h5>High Fidelity – Ticket Selection</h5>
-                                    <p>Final color palette, typography, and button styling.</p>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <img src="../Assets/project_intro/High_Fid_3.png" class="d-block w-100"
-                                    alt="High-fidelity date and time page">
-                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                                    <h5>High Fidelity – Date &amp; Time</h5>
-                                    <p>Polished calendar and entry-time layout with improved contrast.</p>
+                                    <div class="carousel-caption quote-caption">
+                                        <div class="caption-card">
+                                            <strong>Impact:</strong> Content ordering on the web view caused users to
+                                            misinterpret what they were seeing. Recommendation: ensure subscription and
+                                            billing details are visually primary, with offers clearly secondary.
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -170,6 +172,7 @@
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
+
                         <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel"
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -177,7 +180,6 @@
                         </button>
                     </div>
                 </div>
-
             </div>
         </div>
     </header>
@@ -192,475 +194,221 @@
                     <div class="col-md-4">
                         <h2 class="h4">Summary</h2>
                         <p>
-                            The Cheyenne Mountain Zoo’s ticketing experience required a structural and visual redesign.
-                            The existing flow involved numerous steps, unclear navigation, and an inconsistent
-                            presentation
-                            of information. My redesign focused on simplifying the purchase process, clarifying
-                            navigation patterns, and eliminating unnecessary redirections and pop-ups.
+                            The goal of this study was to understand how users engage with settings on mobile, including
+                            how often they access settings, how easily they complete common account tasks, and whether
+                            they prefer completing settings flows in-app or via web redirection. The study captured task
+                            success/failure, time on task, and qualitative feedback through an unmoderated UserZoom
+                            experience.
                         </p>
                     </div>
 
                     <div class="col-md-4">
                         <h2 class="h4">My Role</h2>
                         <p>
-                            I served as the sole designer and researcher for this project. I conducted usability
-                            testing,
-                            analyzed user pain points, defined the problem space, created task flows, and developed
-                            low-, mid-, and high-fidelity prototypes.
+                            As the UX Researcher on this project, I was responsible for:
                         </p>
+                        <ul>
+                            <li>Developing research objectives and success metrics</li>
+                            <li>Synthesizing early stakeholder goals into measurable study questions</li>
+                            <li>Building the unmoderated UserZoom study</li>
+                            <li>Analyzing quantitative metrics (task success & completion time)</li>
+                            <li>Identifying qualitative friction points</li>
+                            <li>Documenting findings and presenting recommendations to stakeholders</li>
+                        </ul>
+                        <p>
+                            This was my first project at STARZ, and it required building the confidence to clearly
+                            advocate for user pain points in conversations with product and design stakeholders.
+                        </p>
+
+
                     </div>
 
                     <div class="col-md-4">
                         <h2 class="h4">The Challenge</h2>
                         <p>
-                            The zoo’s original ticketing flow was visually inconsistent, overwhelming, and required
-                            excessive
-                            navigation steps. The interface contained dense text, unclear hierarchy, and multiple
-                            redirects
-                            to third-party systems. I also needed to re-familiarize myself with Figma after a
-                            significant
-                            break.
+                            One of the biggest challenges in this project was translating user friction into language
+                            that felt actionable and impactful to stakeholders. While some participants completed tasks
+                            successfully, others experienced visibility issues after redirection — including difficulty
+                            locating settings information once transferred to the web environment.
                         </p>
+                        <p>
+                            These inconsistencies created a gap between perceived success and actual user comfort. My
+                            responsibility was to surface these pain points clearly and confidently, even when the
+                            issues were subtle.
+                        </p>
+                        <p>
+                            This project ultimately strengthened my ability to advocate for users in a stakeholder
+                            environment and reinforced the importance of presenting research insights with clarity and
+                            conviction.
+                        </p>
+
                     </div>
                 </div>
             </section>
 
-            <!-- RESEARCH -->
+            <!-- RESEARCH OVERVIEW -->
             <section class="mb-5" id="research">
-                <h2 class="h3 mb-3">Research</h2>
+                <h2 class="h3 mb-3">Study approach</h2>
 
-                <h3 class="h5">Usability Testing &amp; Initial Pain Points</h3>
-                <p>
-                    Early usability testing revealed a major issue: the ticket-purchasing flow was overly complex,
-                    requiring users to click through nine buttons, four separate screens, two pop-ups, and a third-party
-                    checkout before completing a purchase. Participants also noted that information was difficult to
-                    locate and that the layout lacked a clear visual hierarchy.
-                </p>
-                <p>
-                    These findings led to the guiding question:
-                    <strong>“How might we create a simpler and more intuitive ticketing flow that aligns with user
-                        expectations?”</strong>
-                </p>
-                <p>
-                    In response, I redesigned the flow to reduce steps, remove pop-ups, avoid external redirects, and
-                    ensure that all essential actions could be completed within five consolidated screens.
-                </p>
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <h3 class="h5">Method</h3>
+                        <ul class="mb-3">
+                            <li><strong>Type:</strong> Remote, unmoderated usability study (UserZoom)</li>
+                            <li><strong>Environment:</strong> Participants used their personal mobile devices</li>
+                            <li><strong>Data captured:</strong> task success/failure, time on task, observations, and
+                                qualitative feedback</li>
+                            <li><strong>Focus:</strong> how redirection affects usability and preference for in-app vs.
+                                web settings</li>
+                        </ul>
 
-                <!-- Research Images Row -->
-                <div class="row g-3 mb-4">
-                    <div class="col-md-6">
-                        <figure class="figure">
-                            <img src="../Assets/research/CMZ-GetTicket.png" class="figure-img img-fluid rounded"
-                                alt="Screenshot of original Cheyenne Mountain Zoo ticketing system">
-                            <figcaption class="figure-caption">
-                                Original CMZ website: users needed to scroll down the page to locate ticket purchase
-                                options.
-                            </figcaption>
-                        </figure>
+                        <h3 class="h5">Tasks tested</h3>
+                        <ol class="mb-0">
+                            <li>Update email address</li>
+                            <li>Manage / remove devices</li>
+                            <li>Find subscription and billing information</li>
+                        </ol>
                     </div>
-                    <div class="col-md-6">
-                        <figure class="figure">
-                            <img src="../Assets/research/My-GetTicket.png" class="figure-img img-fluid rounded"
-                                alt="Updated navigation bar including direct Get Tickets button">
-                            <figcaption class="figure-caption">
-                                Redesigned navigation bar with an expanded “Tickets” area and a clear “Get Tickets” call
-                                to action.
-                            </figcaption>
-                        </figure>
-                    </div>
+
+                    <!-- Artifact Section -->
+                    <section class="mb-5">
+                        <h3 class="h5">Question Development & Synthesis</h3>
+                        <p>
+                            I synthesized stakeholder goals and questions into themes
+                            (frequency, task ease, redirection impact, and user preference). These
+                            themes were refined into the final tasks and follow-up questions used
+                            in the UserZoom study.
+                        </p>
+
+                        <!-- Clickable Image -->
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#figjamModal">
+                            <img src="../../../Assets/STARZ/SettingsAppVsWeb/QuestionSynthesis.png"
+                                class="img-fluid rounded shadow-sm"
+                                alt="Affinity mapping and question development artifact">
+                        </a>
+
+                        <p class="small text-muted mt-2">
+                            Click image to enlarge.
+                        </p>
+
+                        <!-- FigJam Link -->
+                        <a href="https://www.figma.com/board/SbyRDj5nsSbeN268pRqOHC/UXR-Kickoff--Settings-in-App-v.-Web--Copy-?node-id=0-1&t=p125uAaYiUVeExnW-1"
+                            target="_blank" class="btn btn-sm btn-outline-secondary mt-2">
+                            View Full FigJam Board
+                        </a>
+                    </section>
                 </div>
-
-                <p>
-                    The redesigned process reduces the full ticketing interaction to five screens, eliminates redirects,
-                    removes pop-ups, and decreases button interactions from nine to seven.
-                </p>
             </section>
 
-            <!-- DESIGN -->
-            <section class="mb-5" id="design">
-                <h2 class="h3 mb-3">Design</h2>
+            <!-- KEY FINDINGS -->
+            <section class="mb-5" id="findings">
+                <h2 class="h3 mb-3">Key findings</h2>
 
-                <!-- Problem Statement -->
-                <h3 class="h5">Problem Statement</h3>
-                <p class="fst-italic">
-                    Visitors to the Cheyenne Mountain Zoo need an easy, streamlined way to purchase tickets online
-                    because the current website is overwhelming, text-heavy, and confusing, making it difficult to
-                    quickly plan and complete a purchase.
-                </p>
-
-                <!-- Task Flow -->
-                <h3 class="h5 mt-4">Task Flow</h3>
-                <figure class="figure mb-3">
-                    <img src="../Assets/design/TaskFlow.png" class="figure-img img-fluid rounded"
-                        alt="Task flow diagram for ticket purchase and date selection">
-                    <figcaption class="figure-caption">
-                        Task flow aligned with a streamlined, movie-ticket-style purchase experience.
-                    </figcaption>
-                </figure>
-                <p>
-                    I aimed to design a ticketing process with fewer steps, fewer clicks, and no redirections. Inspired
-                    by modern movie-ticketing flows such as AMC, I structured a predictable user path from
-                    ticket selection to checkout. This direction reflected feedback from the initial user study, where
-                    participants expressed a preference for familiar and direct ticketing patterns.
-                </p>
-
-                <!-- Low Fidelity Carousel -->
-                <h3 class="h5 mt-4">Low-Fidelity Wireframes</h3>
-                <div id="lowFidCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="../Assets/design/low-fid/Main_Hero.png" class="d-block w-100"
-                                alt="Low-fidelity homepage hero">
-                            <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
-                                <h5>Low Fidelity — Homepage Hero</h5>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../Assets/design/low-fid/Main_Card.png" class="d-block w-100"
-                                alt="Low-fidelity card layout">
-                            <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
-                                <h5>Low Fidelity — Card Layout</h5>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../Assets/design/low-fid/Select Ticket.png" class="d-block w-100"
-                                alt="Low-fidelity select ticket quantity">
-                            <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
-                                <h5>Low Fidelity — Ticket Quantity</h5>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../Assets/design/low-fid/Calendar.png" class="d-block w-100"
-                                alt="Low-fidelity calendar view">
-                            <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
-                                <h5>Low Fidelity — Date &amp; Time</h5>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../Assets/design/low-fid/Billing Information.png" class="d-block w-100"
-                                alt="Low-fidelity billing information">
-                            <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
-                                <h5>Low Fidelity — Billing</h5>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../Assets/design/low-fid/Wild Encounters.png" class="d-block w-100"
-                                alt="Low-fidelity wild encounters">
-                            <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
-                                <h5>Low Fidelity — Wild Encounters</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#lowFidCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#lowFidCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-
-                <p>
-                    The low-fidelity wireframes were informed by an analysis of AMC’s ticket flow and the Bronx Zoo’s
-                    ticketing experience. I borrowed structural patterns that supported clarity and speed while
-                    preserving
-                    Cheyenne Mountain Zoo’s strengths, such as strong imagery and video content. Dense paragraphs of
-                    text
-                    were replaced with a cleaner, image-supported layout.
-                </p>
-
-                <!-- Mid Fidelity Carousel -->
-                <h3 class="h5 mt-4">Mid-Fidelity Wireframes</h3>
-                <div id="midFidCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="../Assets/design/mid-fid/Main-Hero.png" class="d-block w-100"
-                                alt="Mid-fidelity homepage hero">
-                            <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
-                                <h5>Mid Fidelity — Homepage Hero</h5>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../Assets/design/mid-fid/Main-Card.png" class="d-block w-100"
-                                alt="Mid-fidelity card layout">
-                            <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
-                                <h5>Mid Fidelity — Card Layout</h5>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../Assets/design/mid-fid/Select-Ticket-Quantity.png" class="d-block w-100"
-                                alt="Mid-fidelity ticket quantity">
-                            <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
-                                <h5>Mid Fidelity — Ticket Quantity</h5>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../Assets/design/mid-fid/Date-Time.png" class="d-block w-100"
-                                alt="Mid-fidelity date and time">
-                            <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
-                                <h5>Mid Fidelity — Date &amp; Time</h5>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../Assets/design/mid-fid/Billing.png" class="d-block w-100"
-                                alt="Mid-fidelity billing screen">
-                            <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
-                                <h5>Mid Fidelity — Billing</h5>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../Assets/design/mid-fid/Wild-Encounters.png" class="d-block w-100"
-                                alt="Mid-fidelity wild encounters">
-                            <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
-                                <h5>Mid Fidelity — Wild Encounters</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#midFidCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#midFidCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-
-                <p>
-                    During the mid-fidelity phase, I refined spacing, corrected grid alignment issues, and introduced
-                    important interaction details and state changes for selected versus unselected
-                    options. These updates made the flow more realistic, while exposing some opportunities to clarify
-                    content hierarchy.
-                </p>
-
-                <!-- High Fidelity Carousel -->
-                <h3 class="h5 mt-4">High-Fidelity Wireframes</h3>
-                <div id="highFidCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <video class="d-block w-100" autoplay loop muted playsinline controls>
-                                <source src="../Assets/design/high-fid/Hero.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-
-                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                                <h5>Cheyenne Mountain Zoo – Hero Video</h5>
-                                <p>Immersive preview of the redesigned homepage experience.</p>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <img src="../Assets/design/high-fid/Main-Card.png" class="d-block w-100"
-                                alt="High-fidelity main layout">
-                            <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
-                                <h5>High Fidelity — Homepage &amp; Cards</h5>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <img src="../Assets/design/high-fid/Select-ticket.png" class="d-block w-100"
-                                alt="High-fidelity ticket quantity">
-                            <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
-                                <h5>High Fidelity — Ticket Selection</h5>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <img src="../Assets/design/high-fid/date-time.png" class="d-block w-100"
-                                alt="High-fidelity date and time">
-                            <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
-                                <h5>High Fidelity — Date &amp; Time</h5>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <img src="../Assets/design/high-fid/Billing.png" class="d-block w-100"
-                                alt="High-fidelity billing screen">
-                            <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
-                                <h5>High Fidelity — Billing</h5>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <img src="../Assets/design/high-fid/Wild-encounters.png" class="d-block w-100"
-                                alt="High-fidelity wild encounters">
-                            <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
-                                <h5>High Fidelity — Wild Encounters</h5>
-                            </div>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">Redirection often felt unexpected</h3>
+                            <p class="mb-0">
+                                Many participants noticed the shift from app to browser and described it as disruptive,
+                                confusing, or unnecessary—especially when they were already signed into the app.
+                            </p>
                         </div>
                     </div>
 
-                    <button class="carousel-control-prev" type="button" data-bs-target="#highFidCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#highFidCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-
-                <p>
-                    In the high-fidelity phase, I introduced final imagery, refined the color palette to meet WCAG AA
-                    contrast standards, and improved spacing for legibility. I also removed unnecessary boxy elements
-                    and
-                    replaced quantity controls with more intuitive actions. Feedback from users directly informed
-                    these
-                    redesign measures including the visual refinements.
-                </p>
-
-                <!-- High Fidelity Prototype Link -->
-                <h3 class="h5 mt-4">High-Fidelity Interactive Prototype</h3>
-                <p>
-                    The final prototype combines a clearer information hierarchy, accessible color usage, and a more
-                    focused interaction model. Back buttons, descriptive labels, and consistent button styles support a
-                    predictable experience, while imagery and video content preserve the zoo’s personality.
-                </p>
-                <a href="https://www.figma.com/proto/dSl4DfKUQK8tEVe5p8yqp6/Kira-s-UX1-Fall-2025-Figma-File-Template?node-id=2177-454&p=f&t=p19FcOJHQ8ZwO298-1&scaling=min-zoom&content-scaling=fixed&page-id=2177%3A444&starting-point-node-id=2177%3A454"
-                    target="_blank" class="btn btn-primary">View Interactive Prototype</a>
-
-                <!-- Instructor Feedback -->
-                <h3 class="h5 mt-4">Instructor Feedback</h3>
-                <p>
-                    Instructor feedback focused on structural and formatting inconsistencies across the wireframes,
-                    including grid misalignment, capitalization patterns, and unclear button hierarchy. We also
-                    discussed
-                    contrast requirements, the role of icons, and when to simplify or remove decorative containers.
-                </p>
-                <p>
-                    In response, I refined the color system to meet AA contrast guidelines, defined primary and
-                    secondary
-                    button styles, reduced unnecessary framing, and corrected layout inconsistencies. These changes
-                    improved both accessibility and the overall polish of the interface.
-                </p>
-
-                <!-- Before & After side by side -->
-                <div class="row g-3">
-                    <div class="col-md-6">
-                        <figure class="figure">
-                            <img src="../Assets/design/instruct-feed/Before.png" class="figure-img img-fluid rounded"
-                                alt="Before design needing improvements">
-                            <figcaption class="figure-caption">
-                                Before: unfriendly palette, heavy reliance on squares, and less consistent alignment.
-                            </figcaption>
-                        </figure>
+                    <div class="col-lg-6">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">Re-login and continuity breaks reduced task completion</h3>
+                            <p class="mb-0">
+                                Some users encountered extra login steps or lost momentum when the experience moved to
+                                the web, which increased frustration and led to partial or failed completion for certain
+                                tasks.
+                            </p>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <figure class="figure">
-                            <img src="../Assets/design/instruct-feed/After.png" class="figure-img img-fluid rounded"
-                                alt="After design with refined layout">
-                            <figcaption class="figure-caption">
-                                After: improved contrast, cleaner composition, and clearer content hierarchy.
-                            </figcaption>
-                        </figure>
+
+                    <div class="col-lg-6">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">Information hierarchy on the web affected comprehension</h3>
+                            <p class="mb-0">
+                                For subscription/billing, users expected their current plan and billing details first.
+                                When offers appeared above plan details, multiple participants interpreted the screen
+                                incorrectly.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">Mobile context matters</h3>
+                            <p class="mb-0">
+                                Users frequently described switching between app and browser as “extra steps” on a
+                                phone,
+                                and some worried about losing their place or accidentally ending sessions.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Evaluation and results -->
-            <section class="mb-5" id="research">
-                <h2 class="h3 mb-3">Evaluation and results</h2>
+            <!-- RECOMMENDATIONS -->
+            <section class="mb-5" id="recommendations">
+                <h2 class="h3 mb-3">Recommendations delivered</h2>
 
-                <h3 class="h5">User testing process and &amp; Pain Points</h3>
-                <p>
-                    I conducted usability testing with three participants using the updated high-fidelity prototype.
-                    Their feedback revealed several areas needing improvement. The most consistent concern involved
-                    visual clarity. Users noted that the original color palette was too dark, resulting in poor
-                    contrast and reduced readability, especially for smaller text elements. Participants also
-                    identified interaction inconsistencies, including squished or unclear buttons, oversized icons,
-                    and navigation that required clicking instead of intuitive hover behavior. Layout concerns were
-                    also observed, such as misaligned content, overly dense boxed sections, and compressed calendar
-                    elements that made information harder to interpret. Additionally, multiple users expected a
-                    dedicated “Tickets” information page and were confused by its absence.
-                </p>
-
-                <h3 class="h5">Updates Made Based on User Feedback</h3>
-                <p>
-                    Based on these findings, I implemented some improvements to strengthen the visual hierarchy
-                    and usability of the final design. I refined the color palette to increase contrast and ensure
-                    WCAG-compliant accessibility, updated the alignment and spacing of key components, and removed
-                    unnecessary box elements to reduce visual clutter. I also standardized button styles, improved
-                    the clarity of the “Get Tickets” call-to-action, and adjusted icon sizes for better consistency
-                    across screens.
-                </p>
-                <p>
-                    While time constraints prevented me from adding the requested dedicated ticket-information page or
-                    updating the video-player interactions, these remain important opportunities for future redesign
-                    efforts.
-                    The completed updates significantly improved readability, interaction clarity, and overall
-                    cohesiveness in the final prototype.
-                </p>
-
-                <!-- Evaluation and results Images Row -->
-                <div class="row g-3 mb-4">
+                <div class="row g-4">
                     <div class="col-md-6">
-                        <figure class="figure">
-                            <img src="../Assets/eval/participantA.png" class="figure-img img-fluid rounded"
-                                alt="Screenshot of original Cheyenne Mountain Zoo ticketing system">
-                            <figcaption class="figure-caption">
-                                User feedback homepage - issues with the heavy brown color palette,
-                                excess boxed sections, and the lack of auto-playing videos or clear indicators.
-                                Participants also expected the “Tickets” navigation link to lead to a dedicated
-                                ticket-information page.
-                            </figcaption>
-                        </figure>
+                        <div class="p-4 bg-light border rounded-3 h-100">
+                            <h3 class="h5">Reduce redirection for high-frequency settings tasks</h3>
+                            <p class="mb-0">
+                                Prioritize in-app completion for core tasks (account details, devices, billing) to
+                                minimize context switching and confusion.
+                            </p>
+                        </div>
                     </div>
+
                     <div class="col-md-6">
-                        <figure class="figure">
-                            <img src="../Assets/eval/participantA.png" class="figure-img img-fluid rounded"
-                                alt="Updated navigation bar including direct Get Tickets button">
-                            <figcaption class="figure-caption">
-                                User feedback extended tickets bar - confusion around the “Get Tickets”
-                                button, including unclear styling and expectations that it should lead to a dedicated
-                                ticket page.
-                            </figcaption>
-                        </figure>
+                        <div class="p-4 bg-light border rounded-3 h-100">
+                            <h3 class="h5">If redirection remains, make it seamless</h3>
+                            <p class="mb-0">
+                                Improve continuity so users aren’t forced to re-authenticate and can clearly understand
+                                where they are, how to return, and what changed.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="p-4 bg-light border rounded-3 h-100">
+                            <h3 class="h5">Clarify hierarchy on subscription/billing screens</h3>
+                            <p class="mb-0">
+                                Ensure current plan and billing information is visually primary; separate promotions so
+                                they don’t look like the user’s active plan.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="p-4 bg-light border rounded-3 h-100">
+                            <h3 class="h5">Use this research to support release quality</h3>
+                            <p class="mb-0">
+                                Document technical errors and usability breaks found in the flow as “release risks,” and
+                                track them as fixable issues tied to measurable user friction.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
-
 
             <!-- REFLECTION -->
             <section class="mb-5" id="reflection">
                 <h2 class="h3 mb-3">Reflection</h2>
-
-                <!-- Future plans -->
-                <h3 class="h5">Future Plans</h3>
                 <p>
-                    If I had additional time, I would expand the experience with a dedicated ticket information page
-                    that
-                    explains pricing options, membership benefits, and what guests receive when purchasing tickets in
-                    advance. I would also design fully responsive mobile layouts, since many visitors are likely to buy
-                    tickets on their phones while planning a visit. Further usability testing with a broader and more
-                    diverse group of participants would help validate the updated flow and uncover edge cases such as
-                    group bookings, accessibility needs, and last-minute purchases.
-                </p>
-
-                <!-- Conclusion -->
-                <h3 class="h5 mt-3">Conclusion</h3>
-                <p>
-                    This project reinforced how strongly visual hierarchy, and interaction
-                    design influence a user’s confidence in completing a task. By simplifying the flow, clarifying
-                    navigation,
-                    and applying consistent visual patterns, the redesigned reduces cognitive load for visitors
-                    purchasing tickets.
-                    Working through several fidelity levels, combined with structured usability testing,
-                    helped me identify and address subtle issues that were not obvious in the initial wireframe.
-                </p>
-                <p>
-                    The work also deepened my understanding of accessibility and design systems. Overall, this case
-                    study strengthened
-                    my skills in end-to-end UX design from research and problem definition through to prototyping,
-                    evaluation, and reflection.
+                    This study helped me build confidence in advocating for users—especially when the issues weren’t
+                    just
+                    “preferences,” but real breakdowns that blocked users from completing settings tasks. Presenting the
+                    findings to stakeholders and the design team reinforced the value of clear evidence (recordings,
+                    metrics, and quotes) when influencing product direction.
                 </p>
             </section>
+
         </div>
     </main>
 
