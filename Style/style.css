@@ -1,3 +1,8 @@
+/* 
+TODO
+separate the style sheet into sections for each page
+*/
+
 /* =========================
    Global / Base Styles
    ========================= */
@@ -205,4 +210,15 @@ header.bg-light strong {
 .portrait {
   max-width: 320px;
   height: auto;
+}
+
+/* =========================
+   STARZinternship page
+   ========================= */
+
+.card-img-top {
+  height: 225px;
+  /* object-fit:cover intentially cuts off images */
+  object-fit: contain;
+  background-color: #f2f2f2c0;
 }
