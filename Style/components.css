@@ -1,0 +1,205 @@
+/* =========================
+   components.css
+   Reusable components and UI patterns
+   ========================= */
+
+/* Navbar */
+.site-nav,
+.navbar-dark.bg-dark {
+    background-color: #08090b !important;
+    border-bottom: 1px solid rgba(227, 207, 166, 0.12);
+}
+
+.navbar-brand,
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--c-text) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: var(--c-sand) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--c-accent) !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--c-accent) !important;
+    border-color: var(--c-accent) !important;
+    color: #0a0b0d !important;
+    /* dark text on bright button = strong contrast */
+    font-weight: 600;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #ff6a43 !important;
+    border-color: #ff6a43 !important;
+    color: #0a0b0d !important;
+}
+
+.btn-outline-secondary {
+    border-color: rgba(227, 207, 166, 0.45) !important;
+    color: var(--c-sand) !important;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+    background-color: rgba(227, 207, 166, 0.10) !important;
+    border-color: rgba(227, 207, 166, 0.65) !important;
+    color: var(--c-text) !important;
+}
+
+.btn-secondary {
+    background-color: rgba(227, 207, 166, 0.10) !important;
+    border-color: rgba(227, 207, 166, 0.35) !important;
+    color: var(--c-text) !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: rgba(227, 207, 166, 0.18) !important;
+    border-color: rgba(227, 207, 166, 0.55) !important;
+}
+
+/* Section cards/panels */
+.p-4.border.rounded-3,
+.p-4.bg-light.border.rounded-3 {
+    background-color: var(--c-surface-1) !important;
+    border-color: var(--c-border) !important;
+    border-radius: var(--r-lg) !important;
+    box-shadow: var(--shadow-soft);
+}
+
+/* Figure captions */
+.figure-caption {
+    color: var(--c-sand) !important;
+    font-size: 0.92rem;
+    text-align: center;
+    margin-top: 0.35rem;
+    opacity: 0.95;
+}
+
+/* Carousels: consistent sizing + media fit */
+#heroCarousel .carousel-item,
+#lowFidCarousel .carousel-item,
+#midFidCarousel .carousel-item,
+#highFidCarousel .carousel-item {
+    position: relative;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    height: auto;
+    max-height: 520px;
+    background-color: #000;
+    /* letterbox */
+    border-radius: var(--r-md);
+}
+
+#heroCarousel img,
+#lowFidCarousel img,
+#midFidCarousel img,
+#highFidCarousel img,
+#highFidCarousel video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #000;
+}
+
+/* Carousel captions: unify look */
+.carousel-caption {
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.85);
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    color: var(--c-sand) !important;
+}
+
+/* Carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(213, 78, 42, 0.95);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background-size: 60% 60%;
+    box-shadow: var(--shadow-tight);
+}
+
+/* Make controls visible on dark and “light” */
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 0.9;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+/* Case-study thumbnail hover */
+.case-thumb {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border-radius: var(--r-md);
+    display: block;
+}
+
+.case-thumb:hover,
+a:focus .case-thumb,
+a:hover .case-thumb {
+  transform: scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Footer */
+
+.site-footer {
+    background-color: var(--c-wine) !important;
+    /* #91191c */
+    border-top: 1px solid rgba(227, 207, 166, 0.15);
+    color: var(--c-text) !important;
+}
+
+.site-footer a {
+    color: var(--c-sand);
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+    color: var(--c-accent);
+}
+
+/* Backward compatibility */
+footer.bg-dark {
+    background-color: var(--c-wine) !important;
+    border-top: 1px solid rgba(227, 207, 166, 0.15);
+}
+
+/* Cards designs */
+
+/* Dark-theme Bootstrap cards */
+.card {
+  background-color: var(--c-surface-1) !important;
+  border: 1px solid var(--c-border) !important;
+  color: var(--c-text) !important;
+  border-radius: var(--r-lg) !important;
+  box-shadow: var(--shadow-soft);
+}
+
+.card .card-title,
+.card .card-text,
+.card p {
+  color: var(--c-text) !important;
+}
+
+.card a {
+  color: var(--c-accent);
+}
+
+.card a:hover,
+.card a:focus {
+  color: #ff6a43;
+}

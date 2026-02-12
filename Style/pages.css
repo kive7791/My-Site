@@ -1,0 +1,71 @@
+/* =========================
+   pages.css
+   Page-level layout patterns + helpers
+   ========================= */
+
+/* Unified hero style */
+.page-hero {
+    background: linear-gradient(180deg,
+            rgba(145, 25, 28, 0.28) 0%,
+            rgba(10, 11, 13, 1) 70%);
+    border-bottom: 1px solid rgba(227, 207, 166, 0.14);
+}
+
+/* Hero text */
+.page-hero h1,
+.page-hero .lead,
+.page-hero p {
+    color: var(--c-text) !important;
+}
+
+.page-hero strong {
+    color: var(--c-sand) !important;
+}
+
+.artifact-grid .figure-img {
+    border-radius: var(--r-md);
+    border: 1px solid rgba(227, 207, 166, 0.18);
+    box-shadow: var(--shadow-soft);
+}
+
+.section-divider {
+    border-top: 1px solid rgba(227, 207, 166, 0.18);
+    padding-top: 1.25rem;
+    margin-top: 2rem;
+}
+
+/* Consistent subheading vibe */
+h2.h3,
+h2.h4,
+h3.h5 {
+    color: var(--c-text);
+}
+
+main .bg-light {
+    background-color: var(--c-surface-2) !important;
+}
+
+/* Side-Side Text-Image */
+.about-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.portrait-img {
+  max-width: 340px;
+  width: 40%;
+  height: auto;
+  border-radius: 12px;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 768px) {
+  .about-wrap {
+    flex-direction: column;
+  }
+  .portrait-img {
+    width: 100%;
+    max-width: 100%;
+  }
+}

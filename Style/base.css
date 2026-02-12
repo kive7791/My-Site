@@ -1,0 +1,132 @@
+/* =========================
+   base.css
+   Design tokens + global base styles
+   ========================= */
+
+:root {
+    /* Brand palette */
+    --c-accent: #d54e2a;
+    /* Buttons, links, emphasis */
+    --c-sand: #e3cfa6;
+    /* Secondary text, captions */
+    --c-red: #d8402f;
+    /* Secondary accent (sparingly) */
+    --c-ink: #0a0b0d;
+    /* Main background */
+    --c-wine: #91191c;
+    /* Hero highlights, footer, dividers */
+
+    /* Derived neutrals (for readability on dark UI) */
+    --c-text: #f3efe6;
+    /* Primary body text (high contrast on --c-ink) */
+    --c-text-muted: #cbb892;
+    /* Muted text (still readable) */
+    --c-border: rgba(227, 207, 166, 0.22);
+    --c-surface-1: #0f1114;
+    /* Cards/sections on dark bg */
+    --c-surface-2: #14171c;
+    /* Slightly lighter than surface-1 */
+
+    /* Effects */
+    --shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.35);
+    --shadow-tight: 0 0 10px rgba(0, 0, 0, 0.55);
+
+    /* Radii */
+    --r-sm: 8px;
+    --r-md: 12px;
+    --r-lg: 16px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--c-ink);
+    color: var(--c-text);
+    font-family: "Open Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--c-text);
+    letter-spacing: 0.2px;
+}
+
+/* Optional: make display headings feel more “brand” */
+.display-5,
+.display-4,
+.display-3 {
+    color: var(--c-text);
+}
+
+/* Body copy */
+p {
+    color: var(--c-text);
+    line-height: 1.65;
+}
+
+.small,
+.text-muted,
+.figure-caption {
+    color: var(--c-text-muted) !important;
+}
+
+/* Links */
+a {
+    color: var(--c-accent);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #ff6a43;
+    /* lighter hover for accessibility */
+    text-decoration: underline;
+}
+
+/* Strong / emphasis */
+strong {
+    color: var(--c-sand);
+}
+
+em {
+    color: var(--c-text-muted);
+}
+
+/* Lists (remove the old orange/purple borders) */
+ul,
+ol {
+    padding-left: 1.2rem;
+}
+
+ul li,
+ol li {
+    margin-bottom: 0.35rem;
+}
+
+/* Default borders for sections/cards you manually add */
+.border,
+.border-bottom {
+    border-color: var(--c-border) !important;
+}
+
+/* Make “bg-light” not fight your dark theme if used accidentally */
+.bg-light {
+    background-color: var(--c-surface-2) !important;
+    color: var(--c-text) !important;
+}
+
+.page-container {
+  max-width: 1100px;     /* adjust to preference */
+  margin: 0 auto;        /* centers content */
+  padding: 2rem 1.5rem;  /* creates space from screen edges */
+}
