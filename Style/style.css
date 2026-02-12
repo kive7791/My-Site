@@ -273,3 +273,20 @@ header.bg-light strong {
   object-fit: contain;
   background: #f8fafc;
 }
+
+/* =========================
+   TitleArtResearch page
+   ========================= */
+
+/* Prevent carousel images from being awkwardly cropped */
+.hero-carousel-img {
+  max-height: 420px;
+  width: 100%;
+  object-fit: contain; /* use 'cover' if you prefer full bleed */
+  background: #0b1f26; /* helps when contain adds letterboxing */
+}
+
+/* Optional: make carousel captions easier to read */
+.carousel-caption {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
