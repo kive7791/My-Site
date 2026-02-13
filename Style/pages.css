@@ -47,25 +47,26 @@ main .bg-light {
 
 /* Side-Side Text-Image */
 .about-wrap {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
 }
 
 .portrait-img {
-  max-width: 340px;
-  width: 40%;
-  height: auto;
-  border-radius: 12px;
-  flex: 0 0 auto;
+    max-width: 340px;
+    width: 40%;
+    height: auto;
+    border-radius: 12px;
+    flex: 0 0 auto;
 }
 
 @media (max-width: 768px) {
-  .about-wrap {
-    flex-direction: column;
-  }
-  .portrait-img {
-    width: 100%;
-    max-width: 100%;
-  }
+    .about-wrap {
+        flex-direction: column;
+    }
+
+    .portrait-img {
+        width: 100%;
+        max-width: 100%;
+    }
 }

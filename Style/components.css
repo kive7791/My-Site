@@ -150,8 +150,8 @@
 .case-thumb:hover,
 a:focus .case-thumb,
 a:hover .case-thumb {
-  transform: scale(1.03);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+    transform: scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
 }
 
 /* Footer */
@@ -182,24 +182,80 @@ footer.bg-dark {
 
 /* Dark-theme Bootstrap cards */
 .card {
-  background-color: var(--c-surface-1) !important;
-  border: 1px solid var(--c-border) !important;
-  color: var(--c-text) !important;
-  border-radius: var(--r-lg) !important;
-  box-shadow: var(--shadow-soft);
+    background-color: var(--c-surface-1) !important;
+    border: 1px solid var(--c-border) !important;
+    color: var(--c-text) !important;
+    border-radius: var(--r-lg) !important;
+    box-shadow: var(--shadow-soft);
 }
 
 .card .card-title,
 .card .card-text,
 .card p {
-  color: var(--c-text) !important;
+    color: var(--c-text) !important;
 }
 
 .card a {
-  color: var(--c-accent);
+    color: var(--c-accent);
 }
 
 .card a:hover,
 .card a:focus {
-  color: #ff6a43;
+    color: #ff6a43;
+}
+
+/* Dark-theme modal styling */
+.modal-content {
+    background-color: var(--c-surface-1);
+    color: var(--c-text);
+    border: 1px solid var(--c-border);
+}
+
+.modal-header,
+.modal-footer {
+    border-color: var(--c-border);
+}
+
+.modal-title {
+    color: var(--c-text);
+}
+
+/* Close button visibility on dark modal */
+.btn-close {
+    filter: invert(1) grayscale(100%);
+}
+
+/* Quote carousel styling */
+.quote-slide {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.quote-slide blockquote {
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.6;
+    max-width: 850px;
+    margin: 0 auto 1rem auto;
+}
+
+.quote-attrib {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.quote-caption {
+    position: static;
+    /* override Bootstrap absolute positioning */
+    margin-top: 1rem;
+}
+
+.caption-card {
+    background-color: var(--c-surface-1);
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-md);
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
 }

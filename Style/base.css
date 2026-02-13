@@ -113,20 +113,38 @@ ol li {
     margin-bottom: 0.35rem;
 }
 
-/* Default borders for sections/cards you manually add */
+/* Default borders for sections/cards manually add */
 .border,
 .border-bottom {
     border-color: var(--c-border) !important;
 }
 
-/* Make “bg-light” not fight your dark theme if used accidentally */
+/* Make “bg-light” not fight personal dark theme if used accidentally */
 .bg-light {
     background-color: var(--c-surface-2) !important;
     color: var(--c-text) !important;
 }
 
 .page-container {
-  max-width: 1100px;     /* adjust to preference */
-  margin: 0 auto;        /* centers content */
-  padding: 2rem 1.5rem;  /* creates space from screen edges */
+    max-width: 1100px;
+    /* adjust to preference */
+    margin: 0 auto;
+    /* centers content */
+    padding: 2rem 1.5rem;
+    /* creates space from screen edges */
+}
+
+/* Center item */
+.center-x {
+    margin-inline: auto;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
