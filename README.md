@@ -1,21 +1,25 @@
-# UD: Learn More About Me
-This website is a personal introduction that gives visitors a glimpse into who I am: my interests, background, and creative journey. It’s designed as a simple, responsive webpage built with Bootstrap, featuring a navigation bar, an “About Me” section, and custom styling using CSS.
+# Kira Velez – Portfolio Website
+This website serves as my professional portfolio, highlighting selected UX research, product design, and software engineering projects. It is designed for graduate program applications and internship/job opportunities, providing a structured overview of my technical work, design process, and academic background.
 
-## What I’m Using
-- HTML5 for page structure
-- CSS3 for styling and color themes
-- Bootstrap 5 for layout and responsive design
-- GitHub Pages for hosting
+The site includes detailed project case studies, coding projects, and a resume section to demonstrate both technical depth and user-centered thinking.
 
-## Features
-- A responsive navigation bar with links to Home, Resume, and Works
-- A personalized “About Me” section with text and imagery
-- A dark-themed design with orange accent colors
-- Integrated email link for contact
+## Technologies Used
+- HTML5 for structure
+- CSS3 for custom styling and layout
+- Bootstrap 5 for responsive design
+- GitHub Pages for hosting and deployment
 
-## Live Demo
-Link: https://kive7791.github.io/My-Site/Pages/Homepage.html 
+## Key Features
+- Dedicated pages for coding projects and UX case studies
+- Project breakdowns including problem framing, technical implementation, and outcomes
+- Embedded media (videos, architecture diagrams, code snippets)
+- Resume and downloadable materials
+- Responsive layout optimized for desktop and mobile viewing
 
-## Author (Me)
+## Live Site
+https://kive7791.github.io/My-Site/Pages/Homepage.html
+
+### Author
 Kira Velez
-Prospective User Experience Researcher | Boulder, Colorado
+Computer Science (B.S.) | Creative Technology & Design Minor
+UX Research & Software Development Focus
