@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Interactive House</title>
+    <title>OpenGL Interactive House</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -32,18 +32,11 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Homepage.html">Home</a>
+                    <li class="nav-item"><a class="nav-link" href="../Homepage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../CodingProjects.html">Coding projects</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Resume.html">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="../CodingProjects.html">Coding projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../CaseStudies.html">Case studies</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../CaseStudies.html">Case studies</a></li>
                 </ul>
             </div>
         </div>
@@ -52,61 +45,98 @@
     <!-- HERO / COVER SECTION -->
     <header class="page-hero">
         <div class="container page-container py-5">
-            <button class="btn btn-secondary mb-4" onclick="history.back()">&#8592; Back to coding projects</button>
+            <div class="row align-items-center">
 
-            <div class="row align-items-center g-4">
-                <!-- Text -->
-                <h1 class="display-5 fw-bold ">OpenGL Interactive House</h1>
+                <div class="col-lg-6">
+                    <button class="btn btn-secondary mb-4" onclick="history.back()">&#8592; Back to coding
+                        projects</button>
 
-                <div class="col-6">
+                    <h1 class="display-5 fw-bold">OpenGL Interactive House</h1>
                     <p class="lead mt-3">
-                        ...
+                        An individual computer graphics project built in C++ using OpenGL. I modeled a house and yard
+                        environment with interactive elements (doors and light switches), then iteratively improved
+                        textures, shading, and lighting over a 4-week build (~50 hours).
                     </p>
 
                     <p class="mb-0">
-                        <strong>Role:</strong> ...<br>
-                        <strong>Team:</strong> ...<br>
-                        <strong>Responsibilities:</strong> ...
+                        <strong>Timeline:</strong> 4 weeks &nbsp;•&nbsp; <strong>Effort:</strong> ~50 hours
+                        &nbsp;•&nbsp;
+                        <strong>Type:</strong> Individual project<br>
+                        <strong>Focus areas:</strong> scene architecture → textures/materials → lighting/shadowing<br>
+                        <strong>Primary challenge:</strong> lighting (balancing ambient/diffuse/specular and interactive
+                        controls)
                     </p>
+
+                    <div class="alert alert-warning mt-4 mb-0" role="alert">
+                        <strong>Note:</strong> This project is best experienced by running locally (OpenGL build). This
+                        page documents the design goals, interactions, and technical approach.
+                    </div>
                 </div>
 
                 <!-- Hero Carousel -->
-                <div class="col-6">
-                    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div id="heroCarousel" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="9000">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
-                                aria-current="true" aria-label="Slide 1"></button>
+                                aria-current="true" aria-label="Interior render"></button>
                             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
+                                aria-label="Exterior render"></button>
                             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
+                                aria-label="Lighting controls snippet"></button>
                         </div>
 
-                        <div class="carousel-inner">
-                            <!-- Slide 1 -->
+                        <div class="carousel-inner rounded overflow-hidden shadow-sm">
+
+                            <!-- Slide 1: Interior -->
                             <div class="carousel-item active">
-                                <img src="../../Assets/OpenGLInteractiveHouse/" class="d-block w-100" alt="...">
+                                <img src="../../Assets/OpenGLInteractiveHouse/FurnishedRoom.png" class="d-block w-100"
+                                    alt="OpenGL Interactive House interior render">
                                 <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                                    <h5>...</h5>
-                                    <p>...</p>
+                                    <h5 class="mb-1">Interior scene</h5>
+                                    <p class="mb-0">Texturing, shading, and lighting applied to a furnished room.</p>
                                 </div>
                             </div>
 
-                            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
+                            <!-- Slide 2: Exterior -->
+                            <div class="carousel-item">
+                                <img src="../../Assets/OpenGLInteractiveHouse/OutsideFront.png" class="d-block w-100"
+                                    alt="OpenGL Interactive House exterior render">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                                    <h5 class="mb-1">House + yard</h5>
+                                    <p class="mb-0">Full environment view with interactable elements.</p>
+                                </div>
+                            </div>
 
+                            <!-- Slide 3: Lighting toggle snippet -->
+                            <div class="carousel-item">
+                                <img src="../../Assets/OpenGLInteractiveHouse/Light_In_Visiable.png"
+                                    class="d-block w-100" alt="Code snippet showing lighting toggle">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                                    <h5 class="mb-1">Lighting visualization + toggle</h5>
+                                    <p class="mb-0">
+                                        Rendering the light source as a visible sphere enabled real-time testing
+                                        of ambient, diffuse, and specular parameters during scene development.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
             </div>
+        </div>
     </header>
 
     <!-- MAIN CONTENT -->
@@ -119,47 +149,217 @@
                     <div class="col-md-4">
                         <h2 class="h4">Summary</h2>
                         <p>
-                            ...
+                            I created a 3D house scene using the OpenGL API and expanded it with more detailed features,
+                            including interactable doors, light switches, and more textured designs.
                         </p>
                     </div>
 
                     <div class="col-md-4">
                         <h2 class="h4">My Role</h2>
-                        <p class="mb-2">
-                            ...
+                        <p>
+                            Individual developer and designer: I planned the scene architecture, implemented object
+                            modeling and interactions, added textures/materials, and iterated on lighting/shading to
+                            improve realism and readability.
                         </p>
                     </div>
 
                     <div class="col-md-4">
                         <h2 class="h4">The Challenge</h2>
-                        <p>
-                            ....
+                        <p class="mb-0">
+                            Lighting was the hardest part: balancing ambient/diffuse/specular values, managing light
+                            position/movement, and ensuring the scene stayed readable across different camera views and
+                            interaction states.
                         </p>
                     </div>
                 </div>
             </section>
 
-            <!-- BUSINESS APPROACH -->
+            <!-- GOALS -->
+            <section class="mb-5" id="goals">
+                <h2 class="h3 mb-3">Project goals</h2>
+                <p class="mb-3">
+                    My goal was to create a scene that allows users to explore the house’s surroundings and interior,
+                    building on a prior home model and adding more detailed interactive features.
+                </p>
 
-            <!-- STUDY APPROACH -->
-            <section class="mb-5" id="approach">
-                <h2 class="h3 mb-3">Study approach</h2>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">Core goals</h3>
+                            <ul class="mb-0">
+                                <li>Explore the yard and interior spaces</li>
+                                <li>Interactable doors (open/close)</li>
+                                <li>Light switches (on/off)</li>
+                                <li>Furnish key rooms (tables, cabinets, etc.)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">Stretch goals</h3>
+                            <ul class="mb-0">
+                                <li>More user-interactable objects</li>
+                                <li>Fully furnished house</li>
+                                <li>Upstairs level</li>
+                                <li>Night/“creepy” mode &amp; special effects (exploratory)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BUILD PHASES -->
+            <section class="mb-5" id="process">
+                <h2 class="h3 mb-3">Build process</h2>
+
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">1) Architecture</h3>
+                            <p class="mb-0">
+                                Established the scene structure first (house + yard), then added modular objects (doors,
+                                furniture, fixtures) to support iteration and interaction.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">2) Styling &amp; textures</h3>
+                            <p class="mb-0">
+                                Added texture toggles and texture modes to compare visual outcomes and debug surface
+                                issues while refining material appearance.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">3) Lighting &amp; shadowing</h3>
+                            <p class="mb-0">
+                                Iterated on light placement, movement, and intensity controls to improve realism without
+                                sacrificing readability, my biggest technical challenge in the project.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INTERACTIONS / CONTROLS -->
+            <section class="mb-5" id="controls">
+                <h2 class="h3 mb-3">Interactions &amp; controls</h2>
+                <p class="mb-3">
+                    The project includes interactive navigation and scene controls, including door toggles, light
+                    switches, and lighting parameters for experimentation.
+                </p>
+
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">Movement &amp; camera</h3>
+                            <ul class="mb-0">
+                                <li><strong>WASD</strong>: first-person movement</li>
+                                <li><strong>Arrows</strong>: change view angle</li>
+                                <li><strong>1/2/3</strong>: camera presets (overhead / perspective / first-person)</li>
+                                <li><strong>[ / ]</strong>: zoom controls</li>
+                                <li><strong>- / =</strong>: field of view controls</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">Scene toggles</h3>
+                            <ul class="mb-0">
+                                <li><strong>H</strong>: open/close doors</li>
+                                <li><strong>U</strong>: toggle light switch</li>
+                                <li><strong>C</strong>: textures on/off</li>
+                                <li><strong>F</strong>: smooth vs. flat shading</li>
+                                <li><strong>R</strong>: lights on/off</li>
+                                <li><strong>K</strong>: light movement on/off</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LIGHTING FOCUS -->
+            <section class="mb-5" id="lighting">
+                <h2 class="h3 mb-3">Lighting: the hardest part</h2>
 
                 <div class="row g-4">
                     <div class="col-lg-7">
-                        <h3 class="h5">Method</h3>
+                        <p class="mb-3">
+                            Lighting was my biggest struggle because small parameter changes dramatically affected
+                            realism and scene readability. I added interactive controls so I could tune values in
+                            real-time and observe how ambient, diffuse, and specular light impacted different surfaces
+                            and textures.
+                        </p>
 
-                        <h3 class="h5">What we evaluated</h3>
+                        <h3 class="h5">What I implemented to learn/debug</h3>
+                        <ul class="mb-0">
+                            <li>Keyboard-driven controls for ambient/diffuse/specular intensity</li>
+                            <li>Light distance and elevation controls to study falloff and shadow behavior</li>
+                            <li>Optional light movement to verify specular highlights and surface response</li>
+                            <li>Texture mode toggles (modulate/replace) to isolate lighting vs. texture artifacts</li>
+                        </ul>
                     </div>
 
-                    <!-- Project artifacts -->
                     <div class="col-lg-5">
                         <div class="p-4 border rounded-3 h-100">
-                            <h3 class="h5">Project artifacts</h3>
-                            <p class="mb-3">
-                                ...
+                            <h3 class="h5">Takeaway</h3>
+                            <p class="mb-0">
+                                Treating lighting as a system, rather than a final “polish step”—helped me iterate
+                                methodically and build intuition for how materials and shading models behave in OpenGL.
                             </p>
-                            ]
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJECT ARTIFACTS -->
+            <section class="mb-5" id="artifacts">
+                <h2 class="h3 mb-3">Project artifacts</h2>
+
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <p class="mb-3">
+                            These artifacts capture the concept, implementation, and visuals for the project.
+                        </p>
+
+                        <ul class="mb-0">
+                            <li><strong>GitHub repository:</strong> source code (C++ / OpenGL) + build instructions</li>
+                            <li><strong>Demo video:</strong> Interactive house showing</li>
+                            <li><strong>Concept goals:</strong> project proposal with interaction and stretch goals</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">Links</h3>
+                            <p class="mb-3">
+                                Review the codebase and implementation details here:
+                            </p>
+
+                            <div class="d-grid gap-2">
+                                <a class="btn btn-sm btn-outline-secondary"
+                                    href="https://github.com/kive7791/OpenGL_Interactive_House.git" target="_blank"
+                                    rel="noopener">
+                                    GitHub repository
+                                </a>
+
+                                <a class="btn btn-sm btn-outline-secondary" href="../../Assets/OpenGLInteractiveHouse/"
+                                    target="_blank" rel="noopener">
+                                    Product demo
+                                </a>
+
+                                <a class="btn btn-sm btn-outline-secondary"
+                                    href="../../Assets/OpenGLInteractiveHouse/Goals_writeup.pdf" target="_blank"
+                                    rel="noopener">
+                                    Concept goals
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -168,9 +368,21 @@
             <!-- REFLECTION -->
             <section class="mb-5" id="reflection">
                 <h2 class="h3 mb-3">Reflection</h2>
+
+                <h3 class="h5">What I learned</h3>
                 <p>
-                    ...
+                    This project strengthened my ability to build a complex interactive 3D scene by iterating from
+                    architecture to textures and then to lighting. The biggest learning curve was lighting: I gained
+                    practical intuition for how ambient, diffuse, and specular settings affect realism, and how
+                    interactive controls can accelerate debugging and refinement.
                 </p>
+
+                <h3 class="h5 mt-3">Next improvements</h3>
+                <ul class="mb-0">
+                    <li>Finalize materials and shadow quality for more realistic depth cues</li>
+                    <li>Expand interaction (more toggles or object animations)</li>
+                    <li>Improve “night mode” exploration as an optional scene variant</li>
+                </ul>
             </section>
 
         </div>
@@ -181,10 +393,7 @@
     </footer>
 
     <!-- Bootstrap JS bundle -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
