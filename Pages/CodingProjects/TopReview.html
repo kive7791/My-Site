@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TopReview</title>
+    <title>TopReview – Film Review Aggregator</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -32,18 +32,11 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Homepage.html">Home</a>
+                    <li class="nav-item"><a class="nav-link" href="../Homepage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../CodingProjects.html">Coding projects</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Resume.html">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="../CodingProjects.html">Coding projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../CaseStudies.html">Case studies</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../CaseStudies.html">Case studies</a></li>
                 </ul>
             </div>
         </div>
@@ -52,61 +45,100 @@
     <!-- HERO / COVER SECTION -->
     <header class="page-hero">
         <div class="container page-container py-5">
-            <button class="btn btn-secondary mb-4" onclick="history.back()">&#8592; Back to coding projects</button>
+            <div class="row align-items-center">
 
-            <div class="row align-items-center g-4">
                 <!-- Text -->
-                <h1 class="display-5 fw-bold ">TopReview</h1>
+                <div class="col-lg-6">
+                    <button class="btn btn-secondary mb-4" onclick="history.back()">&#8592; Back to coding
+                        projects</button>
 
-                <div class="col-6">
+                    <h1 class="display-5 fw-bold">TopReview</h1>
                     <p class="lead mt-3">
-                        ...
+                        A film review aggregator that pulls reviews from external sources, categorizes sentiment
+                        (negative / neutral / positive),
+                        and generates concise summaries to help users decide whether a movie is worth watching.
                     </p>
 
                     <p class="mb-0">
-                        <strong>Role:</strong> ...<br>
-                        <strong>Team:</strong> ...<br>
-                        <strong>Responsibilities:</strong> ...
+                        <strong>Role:</strong> Frontend support + ChatGPT API integration + debugging + project
+                        coordination<br>
+                        <strong>Team:</strong> Gunhi Kim, Tyler Kloster, Siranush Mazmandyan, Alex Pham, Kira Velez<br>
+                        <strong>Tech stack:</strong> Node.js, MySQL, EJS/HTML/CSS, GitHub, external APIs (TMDb,
+                        Letterboxd, Google Cloud NLP, ChatGPT)
                     </p>
+
+                    <div class="alert alert-warning mt-4 mb-0" role="alert">
+                        <strong>Note:</strong> The original deployment and demo video link are currently down. This page
+                        documents the project,
+                        architecture, and contributions, and links to the repository.
+                    </div>
                 </div>
 
                 <!-- Hero Carousel -->
-                <div class="col-6">
-                    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div id="heroCarousel" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="9000">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
-                                aria-current="true" aria-label="Slide 1"></button>
+                                aria-current="true" aria-label="Project overview"></button>
                             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
+                                aria-label="Tech stack and APIs"></button>
                             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
+                                aria-label="Architecture"></button>
                         </div>
 
-                        <div class="carousel-inner">
-                            <!-- Slide 1 -->
+                        <div class="carousel-inner rounded overflow-hidden shadow-sm">
+
+                            <!-- Slide 1: Review Page Overview -->
                             <div class="carousel-item active">
-                                <img src="../../Assets/TopReview/" class="d-block w-100" alt="...">
+                                <img src="../../Assets/TopReview/ReviewPage.png" class="d-block w-100"
+                                    alt="TopReview review page showing movie poster and AI-generated positive, neutral, and negative summaries">
+
                                 <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                                    <h5>...</h5>
-                                    <p>...</p>
+                                    <h5 class="mb-1">Review page interface</h5>
+                                    <p class="mb-0">
+                                        Aggregated reviews grouped by sentiment with concise AI-generated summaries for
+                                        faster decision-making.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Slide 2: Tools/APIs (placeholder image) -->
+                            <div class="carousel-item">
+                                <img src="../../Assets/TopReview/TechnologyStack.png" class="d-block w-100"
+                                    alt="TopReview tech stack diagram">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                                    <h5 class="mb-1">External APIs + NLP</h5>
+                                    <p class="mb-0">TMDb + Letterboxd + Google Cloud sentiment + ChatGPT summarization.
+                                    </p>
                                 </div>
                             </div>
 
-                            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
+                            <!-- Slide 3: Architecture (placeholder image) -->
+                            <div class="carousel-item">
+                                <img src="../../Assets/TopReview/ArchitectureDiagram.png" class="d-block w-100"
+                                    alt="TopReview architecture diagram">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                                    <h5 class="mb-1">Application architecture</h5>
+                                    <p class="mb-0">Login / Register → Home → Review page → Profile.</p>
+                                </div>
+                            </div>
 
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
             </div>
+        </div>
     </header>
 
     <!-- MAIN CONTENT -->
@@ -119,47 +151,191 @@
                     <div class="col-md-4">
                         <h2 class="h4">Summary</h2>
                         <p>
-                            ...
+                            TopReview helps movie watchers make faster decisions by aggregating large volumes of reviews
+                            and converting them into
+                            sentiment categories (negative / neutral / positive) and a readable summary of what people
+                            are saying.
                         </p>
                     </div>
 
                     <div class="col-md-4">
                         <h2 class="h4">My Role</h2>
-                        <p class="mb-2">
-                            ...
+                        <p>
+                            I supported planning and coordination, built shared UI elements (footer), helped with page
+                            layout (especially the review page),
+                            debugged styling issues, and implemented the ChatGPT API portion used for summarizing
+                            categorized reviews.
                         </p>
                     </div>
 
                     <div class="col-md-4">
                         <h2 class="h4">The Challenge</h2>
-                        <p>
-                            ....
+                        <p class="mb-0">
+                            We faced shifting scope due to a team member leaving mid-project, which forced us to remove
+                            planned search functionality.
+                            We also had to select workable review sources (TMDb and Letterboxd) and integrate multiple
+                            APIs reliably within limited time (3-4 weeks).
                         </p>
                     </div>
                 </div>
             </section>
 
-            <!-- BUSINESS APPROACH -->
+            <!-- PROBLEM -->
+            <section class="mb-5" id="problem">
+                <h2 class="h3 mb-3">Problem</h2>
+                <p class="fst-italic">
+                    Movies are getting longer, and each title can have hundreds of reviews. Users need a faster way to
+                    understand overall sentiment
+                    without reading everything.
+                </p>
+                <p class="mb-0">
+                    TopReview addresses this by automatically collecting reviews and turning them into sentiment groups
+                    and summaries.
+                </p>
+            </section>
 
-            <!-- STUDY APPROACH -->
-            <section class="mb-5" id="approach">
-                <h2 class="h3 mb-3">Study approach</h2>
+            <!-- SOLUTION -->
+            <section class="mb-5" id="solution">
+                <h2 class="h3 mb-3">Solution</h2>
 
                 <div class="row g-4">
                     <div class="col-lg-7">
-                        <h3 class="h5">Method</h3>
-
-                        <h3 class="h5">What we evaluated</h3>
+                        <h3 class="h5">How it works</h3>
+                        <ol class="mb-0">
+                            <li><strong>Fetch movie data:</strong> Get movie info using TMDb.</li>
+                            <li><strong>Collect reviews:</strong> Pull user reviews from sources like Letterboxd (plus
+                                other open sources when available).</li>
+                            <li><strong>Sentiment analysis:</strong> Use Google Cloud NLP to label each review as
+                                negative, neutral, or positive.</li>
+                            <li><strong>Summarize:</strong> Feed categorized reviews into ChatGPT to generate a concise
+                                summary.</li>
+                            <li><strong>Display:</strong> Show movie info and summarized reviews on the review page.
+                            </li>
+                        </ol>
                     </div>
 
-                    <!-- Project artifacts -->
                     <div class="col-lg-5">
                         <div class="p-4 border rounded-3 h-100">
-                            <h3 class="h5">Project artifacts</h3>
+                            <h3 class="h5">Tech stack</h3>
+                            <ul class="mb-0">
+                                <li><strong>Frontend:</strong> EJS + HTML + CSS</li>
+                                <li><strong>Backend:</strong> Node.js (Express)</li>
+                                <li><strong>Database:</strong> MySQL</li>
+                                <li><strong>APIs:</strong> TMDb, Letterboxd, Google Cloud NLP, ChatGPT</li>
+                                <li><strong>Testing:</strong> Mocha</li>
+                                <li><strong>Workflow:</strong> Agile + GitHub Projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ARCHITECTURE -->
+            <section class="mb-5" id="architecture">
+                <h2 class="h3 mb-3">Architecture</h2>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">Core pages</h3>
+                            <ul class="mb-0">
+                                <li>Register</li>
+                                <li>Login</li>
+                                <li>Home (movie cards)</li>
+                                <li>Review page (summaries + source review links)</li>
+                                <li>Profile</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">Key constraints</h3>
+                            <ul class="mb-0">
+                                <li>Search feature removed after team member departure</li>
+                                <li>Rotten Tomatoes not usable; relied on TMDb and Letterboxd</li>
+                                <li>API integration needed stable formatting across responses</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TESTING -->
+            <section class="mb-5" id="testing">
+                <h2 class="h3 mb-3">Testing</h2>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">Auth + validation tests</h3>
+                            <ul class="mb-0">
+                                <li>Password hashing and storage during registration</li>
+                                <li>Login success after registration</li>
+                                <li>Required-field validation on login/register</li>
+                                <li>Username uniqueness checks</li>
+                                <li>Login case-sensitivity checks</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">Review page verification</h3>
+                            <ul class="mb-0">
+                                <li>Movie pages load and show summaries correctly</li>
+                                <li>Source review links align with displayed review content</li>
+                                <li>Table/movie metadata displays correctly on the page</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJECT ARTIFACTS -->
+            <section class="mb-5" id="artifacts">
+                <h2 class="h3 mb-3">Project artifacts</h2>
+
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <p class="mb-3">
+                            The original deployment and hosted demo are currently unavailable, but the repository and
+                            documentation below capture the full project scope,
+                            architecture, and implementation.
+                        </p>
+
+                        <ul class="mb-0">
+                            <li><strong>GitHub repository:</strong> source code + commit history</li>
+                            <li><strong>Project presentation:</strong> overview, tools, architecture diagram, challenges
+                            </li>
+                            <li><strong>Project report:</strong> detailed description, contributions, test results,
+                                deployment notes</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">Links</h3>
                             <p class="mb-3">
-                                ...
+                                Use these links to review the full implementation and supporting documentation.
                             </p>
-                            ]
+
+                            <div class="d-grid gap-2">
+                                <a class="btn btn-sm btn-outline-secondary"
+                                    href="https://github.com/sima3946/recitation-15-team-07-TopReview" target="_blank"
+                                    rel="noopener">
+                                    GitHub repository
+                                </a>
+
+                                <a class="btn btn-sm btn-outline-secondary"
+                                    href="../../Assets/TopReview/ProjectPresentation_07.pdf" target="_blank"
+                                    rel="noopener">
+                                    Project presentation (PDF)
+                                </a>
+
+                                <a class="btn btn-sm btn-outline-secondary"
+                                    href="../../Assets/TopReview/ProjectReport_07.pdf" target="_blank" rel="noopener">
+                                    Project report (PDF)
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -168,9 +344,23 @@
             <!-- REFLECTION -->
             <section class="mb-5" id="reflection">
                 <h2 class="h3 mb-3">Reflection</h2>
+
+                <h3 class="h5">What I learned</h3>
                 <p>
-                    ...
+                    This project strengthened my ability to integrate multiple external APIs and translate NLP outputs
+                    into a clear, user-facing experience. I gained hands-on experience reading API
+                    documentation (particularly for the ChatGPT API) and debugging integration and usage issues. I also
+                    improved my frontend debugging skills and collaborated within an Agile workflow using GitHub
+                    Projects as a Kanban board, which helped our team stay aligned and track progress effectively.
                 </p>
+
+                <h3 class="h5 mt-3">What I’d improve next</h3>
+                <ul class="mb-0">
+                    <li>Restore search and filtering to support faster discovery</li>
+                    <li>Add clearer transparency around sentiment scoring and summary generation</li>
+                    <li>Improve reliability with caching and rate-limit handling for external APIs</li>
+                    <li>Re-deploy the app and publish a new demo video</li>
+                </ul>
             </section>
 
         </div>
@@ -181,7 +371,6 @@
     </footer>
 
     <!-- Bootstrap JS bundle -->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>

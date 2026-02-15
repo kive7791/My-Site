@@ -259,3 +259,10 @@ footer.bg-dark {
     max-width: 800px;
     margin: 0 auto;
 }
+
+.alert{
+    background-color: var(--c-ink);
+    border: 1px solid var(--c-red);
+    border-radius: var(--r-md);
+    color: var(--c-text-muted);
+}
