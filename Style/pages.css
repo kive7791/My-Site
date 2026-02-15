@@ -70,3 +70,128 @@ main .bg-light {
         max-width: 100%;
     }
 }
+
+.resume-wrap {
+    max-width: 980px;
+}
+
+.resume-header {
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+}
+
+.resume-title {
+    letter-spacing: .3px;
+}
+
+.resume-meta a {
+    text-decoration: underline;
+}
+
+.resume-meta a:hover {
+    text-decoration: underline;
+    color: var(--c-sand) !important;
+}
+
+.resume-section {
+    margin-top: 1.75rem;
+}
+
+.resume-section h2 {
+    font-size: 1.5rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    margin-bottom: .75rem;
+}
+
+.resume-subhead {
+    font-weight: 600;
+}
+
+.resume-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.resume-when {
+    color: rgba(255, 255, 255, .70);
+    font-size: .95rem;
+    white-space: nowrap;
+}
+
+.resume-where {
+    color: rgba(255, 255, 255, .80);
+    font-size: .95rem;
+}
+
+.resume-bullets {
+    margin-bottom: 0;
+}
+
+.resume-bullets li {
+    margin-bottom: .35rem;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .75rem 1.25rem;
+}
+
+@media (max-width: 768px) {
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.pill {
+    display: inline-block;
+    padding: .15rem .5rem;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 999px;
+    font-size: .85rem;
+    margin: .2rem .2rem 0 0;
+}
+
+.muted {
+    color: var(--c-border);
+}
+
+.tight {
+    margin-bottom: .35rem;
+}
+
+.smallish {
+    font-size: .95rem;
+}
+
+/* Make the layout feel like a resume: left content + right skills */
+.resume-two-col {
+    display: grid;
+    grid-template-columns: 1.35fr .85fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 992px) {
+    .resume-two-col {
+        grid-template-columns: 1fr;
+    }
+}
+
+.resume-card {
+    border: 1px solid var(--c-border);
+    border-radius: 14px;
+    padding: 1rem;
+}
+
+.resume-card h3 {
+    font-size: 1rem;
+    margin-bottom: .5rem;
+}
+
+.download-row {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
