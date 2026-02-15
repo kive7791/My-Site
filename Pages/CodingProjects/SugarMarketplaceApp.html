@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sugar</title>
+    <title>Sugar – Hyper-Local Food Marketplace</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -32,18 +32,11 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Homepage.html">Home</a>
+                    <li class="nav-item"><a class="nav-link" href="../Homepage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../CodingProjects.html">Coding projects</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Resume.html">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="../CodingProjects.html">Coding projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../CaseStudies.html">Case studies</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../CaseStudies.html">Case studies</a></li>
                 </ul>
             </div>
         </div>
@@ -52,61 +45,100 @@
     <!-- HERO / COVER SECTION -->
     <header class="page-hero">
         <div class="container page-container py-5">
-            <button class="btn btn-secondary mb-4" onclick="history.back()">&#8592; Back to coding projects</button>
+            <div class="row align-items-center">
 
-            <div class="row align-items-center g-4">
                 <!-- Text -->
-                <h1 class="display-5 fw-bold ">Sugar Marketplace App</h1>
+                <div class="col-lg-6">
+                    <button class="btn btn-secondary mb-4" onclick="history.back()">&#8592; Back to coding
+                        projects</button>
 
-                <div class="col-6">
+                    <h1 class="display-5 fw-bold">Sugar</h1>
                     <p class="lead mt-3">
-                        ...
+                        A hyper-local marketplace for buying and selling food, designed to reduce food waste by making it
+                        easier for
+                        people to share, sell, and discover surplus food in their community.
                     </p>
 
                     <p class="mb-0">
-                        <strong>Role:</strong> ...<br>
-                        <strong>Team:</strong> ...<br>
-                        <strong>Responsibilities:</strong> ...
+                        <strong>Team:</strong> Ruby Gavagan (CEO), Kira Velez (CMO), Tome Dudonov (CFO), Max Mayali
+                        (CPO), Roman Di Domizio (CTO), Jennifer Kim (COO)
+                        <strong>My role:</strong> Product + UI designer (logo, color scheme, welcome/login flows, key
+                        screens) and
+                        frontend implementation support.<br>
+                        <strong>Focus:</strong> Trust, safety, and convenience; turning research insights into a usable
+                        product.
                     </p>
                 </div>
 
                 <!-- Hero Carousel -->
-                <div class="col-6">
-                    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div id="heroCarousel" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="9000">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
-                                aria-current="true" aria-label="Slide 1"></button>
+                                aria-current="true" aria-label="Design system"></button>
                             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
+                                aria-label="Business model"></button>
                             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
+                                aria-label="Product build"></button>
                         </div>
 
-                        <div class="carousel-inner">
-                            <!-- Slide 1 -->
+                        <div class="carousel-inner rounded shadow-sm">
+
+                            <!-- Slide 1: UI / Branding (replace with your best screen) -->
                             <div class="carousel-item active">
-                                <img src="../../Assets/Sugar/" class="d-block w-100" alt="...">
+                                <img src="../../Assets/Sugar/WelcomeScreen.png" class="d-block w-100"
+                                    alt="Sugar UI branding example - welcome page screenshot">
                                 <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                                    <h5>...</h5>
-                                    <p>...</p>
+                                    <h5 class="mb-1">Design system + onboarding</h5>
+                                    <p class="mb-0">Branding, color scheme, and entry flow designed for clarity and
+                                        trust.</p>
                                 </div>
                             </div>
 
-                            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
+                            <!-- Slide 2: Business / Lean Canvas (replace with a slide image from pitch deck) -->
+                            <div class="carousel-item">
+                                <img src="../../Assets/Sugar/LeanCanvas.png" class="d-block w-100"
+                                    alt="Sugar business model overview - lean canvas">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                                    <h5 class="mb-1">Business + value proposition</h5>
+                                    <p class="mb-0">Reducing waste through a trusted, convenient, community marketplace.
+                                    </p>
+                                </div>
+                            </div>
 
+                            <!-- Slide 3: App build -->
+                            <div class="carousel-item">
+                                <div class="media-fit">
+                                    <video controls preload="metadata" muted playsinline>
+                                        <source src="../../Assets/Sugar/MVPdemo.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                                    <h5 class="mb-1">MVP demo</h5>
+                                    <p class="mb-0">Marketplace browsing + listings + core workflows.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
+
             </div>
+        </div>
     </header>
 
     <!-- MAIN CONTENT -->
@@ -119,47 +151,203 @@
                     <div class="col-md-4">
                         <h2 class="h4">Summary</h2>
                         <p>
-                            ...
+                            Sugar is a community-focused food marketplace designed to reduce food waste by making it
+                            easy to post,
+                            browse, and exchange surplus food locally, while building trust through safety-forward
+                            product decisions.
                         </p>
                     </div>
 
                     <div class="col-md-4">
                         <h2 class="h4">My Role</h2>
-                        <p class="mb-2">
-                            ...
+                        <p>
+                            I led key parts of the product’s visual identity and UI design, including the logo, color
+                            system, and
+                            onboarding screens (welcome, login, and related flows). I also contributed to frontend
+                            implementation to
+                            ensure the final build matched the design intent.
                         </p>
                     </div>
 
                     <div class="col-md-4">
                         <h2 class="h4">The Challenge</h2>
-                        <p>
-                            ....
+                        <p class="mb-0">
+                            Our research showed that trust and food safety are major barriers to food sharing. The
+                            challenge was
+                            designing a marketplace that feels safe and convenient enough for real adoption, while still
+                            supporting
+                            the project’s goal of reducing food waste.
                         </p>
                     </div>
                 </div>
             </section>
 
-            <!-- BUSINESS APPROACH -->
-
-            <!-- STUDY APPROACH -->
-            <section class="mb-5" id="approach">
-                <h2 class="h3 mb-3">Study approach</h2>
+            <!-- BUSINESS CONTEXT -->
+            <section class="mb-5" id="business">
+                <h2 class="h3 mb-3">Business + product strategy</h2>
 
                 <div class="row g-4">
                     <div class="col-lg-7">
-                        <h3 class="h5">Method</h3>
+                        <p class="mb-3">
+                            Sugar’s strategy centers on reducing waste while respecting the real concerns users have
+                            about food safety
+                            and reliability. We explored a tiered marketplace model that supports multiple sources of
+                            surplus food,
+                            including peer-to-peer listings and trusted providers.
+                        </p>
 
-                        <h3 class="h5">What we evaluated</h3>
+                        <h3 class="h5">Key research insights</h3>
+                        <ul class="mb-0">
+                            <li><strong>Trust is essential:</strong> people prefer sharing or buying from sources they
+                                feel are safe and vetted.</li>
+                            <li><strong>Affordability + convenience drive adoption:</strong> users want low-friction
+                                workflows and clear value.</li>
+                            <li><strong>Reducing waste is motivating:</strong> many users want to sell or share food
+                                before it expires.</li>
+                            <li><strong>Feature opportunities:</strong> ratings/verification, ingredient filtering, and
+                                food tracking to prevent waste.</li>
+                        </ul>
                     </div>
 
-                    <!-- Project artifacts -->
                     <div class="col-lg-5">
                         <div class="p-4 border rounded-3 h-100">
-                            <h3 class="h5">Project artifacts</h3>
+                            <h3 class="h5">Key product decisions</h3>
+                            <ul class="mb-0">
+                                <li><strong>Trust & safety:</strong> rating/verification mechanisms to support safer
+                                    exchanges.</li>
+                                <li><strong>Food tracking:</strong> help users identify items likely to go to waste and
+                                    suggest actions.</li>
+                                <li><strong>Marketplace tiers:</strong> expand beyond “leftovers” to include
+                                    trusted/professional sources and amateur sellers.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DESIGN SYSTEM / UI -->
+            <section class="mb-5" id="design">
+                <h2 class="h3 mb-3">Brand + UI design</h2>
+
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <p class="mb-3">
+                            I focused on creating a visual system that feels modern, friendly, and trustworthy. My
+                            design work
+                            included the app’s logo, color palette, and onboarding experience (welcome/login), with an
+                            emphasis on
+                            readability and approachable interactions.
+                        </p>
+
+                        <h3 class="h5">Design goals</h3>
+                        <ul class="mb-0">
+                            <li>Signal <strong>trust</strong> through clean hierarchy, predictable patterns, and clear
+                                labels.</li>
+                            <li>Support <strong>quick posting and browsing</strong> so the product feels effortless.
+                            </li>
+                            <li>Keep the UI <strong>inclusive</strong> with strong contrast and legible typography.</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">My contributions</h3>
+                            <ul class="mb-0">
+                                <li>Logo + core branding</li>
+                                <li>Color scheme + UI consistency</li>
+                                <li>Welcome + login flows</li>
+                                <li>Frontend implementation support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- APP FEATURES -->
+            <section class="mb-5" id="features">
+                <h2 class="h3 mb-3">MVP features</h2>
+
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <p class="mb-3">
+                            The MVP supports core marketplace behaviors: browsing listings, viewing details, and
+                            interacting with items
+                            in a way that is scalable to future checkout or messaging features.
+                        </p>
+
+                        <ul class="mb-0">
+                            <li><strong>Marketplace browsing:</strong> view “Free” and paid items, sorted by recency.
+                            </li>
+                            <li><strong>Item detail modal:</strong> see description, origin, certifications, expiry, and
+                                location (when shared).</li>
+                            <li><strong>Extensibility:</strong> design supports future checkout, messaging, and seller
+                                contact flows.</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">Tech stack</h3>
+                            <ul class="mb-0">
+                                <li><strong>Frontend:</strong> React Native + Expo + TypeScript</li>
+                                <li><strong>Backend:</strong> Node.js + Express</li>
+                                <li><strong>Database:</strong> MongoDB Atlas</li>
+                                <li><strong>Auth:</strong> JWT</li>
+                                <li><strong>UI:</strong> React Native Paper</li>
+                                <li><strong>Forms:</strong> Formik + Yup</li>
+                                <li><strong>CI/CD:</strong> GitHub Actions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJECT ARTIFACTS -->
+            <section class="mb-5" id="artifacts">
+                <h2 class="h3 mb-3">Project artifacts</h2>
+
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <p class="mb-3">
+                            These artifacts capture the business strategy, research insights, and final design +
+                            implementation.
+                        </p>
+
+                        <ul class="mb-0">
+                            <li><strong>Business & research:</strong> empathy interviews and investor update (insights +
+                                product direction).</li>
+                            <li><strong>Planning:</strong> lean canvas and pitch materials (value proposition and MVP
+                                definition).</li>
+                            <li><strong>Design:</strong> final Figma prototype (end-to-end flows).</li>
+                            <li><strong>Implementation:</strong> GitHub repository (React Native app + backend API +
+                                setup docs).</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">Links</h3>
                             <p class="mb-3">
-                                ...
+                                View the prototype and codebase for full details.
                             </p>
-                            ]
+
+                            <div class="d-grid gap-2">
+                                <a class="btn btn-sm btn-outline-secondary"
+                                    href="https://github.com/romandidomizio/Sugar.git" target="_blank" rel="noopener">
+                                    GitHub repository
+                                </a>
+
+                                <a class="btn btn-sm btn-outline-secondary" href="../../Assets/Sugar/MVPdemo.mp4"
+                                    target="_blank" rel="noopener">
+                                    Product demo
+                                </a>
+
+                                <a class="btn btn-sm btn-outline-secondary"
+                                    href="https://www.figma.com/proto/TqV3kLK3n5rdKIYXyjMoK6/Sugar-Prototype?node-id=2268-479&p=f&t=bjSBjuawRM0jr9Wu-1&scaling=scale-down&content-scaling=fixed&page-id=2268%3A154&starting-point-node-id=2268%3A489&show-proto-sidebar=1"
+                                    target="_blank" rel="noopener">
+                                    Figma final prototype
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -168,9 +356,23 @@
             <!-- REFLECTION -->
             <section class="mb-5" id="reflection">
                 <h2 class="h3 mb-3">Reflection</h2>
+
+                <h3 class="h5">What I learned</h3>
                 <p>
-                    ...
+                    This project strengthened my ability to connect user research to product decisions and express those
+                    choices
+                    through a cohesive visual system. It also helped me translate design into implementation by
+                    collaborating on
+                    frontend work and validating the build against the prototype.
                 </p>
+
+                <h3 class="h5 mt-3">Next improvements</h3>
+                <ul class="mb-0">
+                    <li>Expand trust mechanisms (verification, ratings, clearer sourcing)</li>
+                    <li>Improve food tracking and “use before it expires” suggestions</li>
+                    <li>Add messaging/checkout workflows with clear safety guidance</li>
+                    <li>Continue accessibility checks (contrast, focus states, reduced motion)</li>
+                </ul>
             </section>
 
         </div>
@@ -181,7 +383,6 @@
     </footer>
 
     <!-- Bootstrap JS bundle -->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
