@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Regular Expression Interpreter</title>
+    <title>Regular Expression Interpreter – Parser + NFA (Thompson)</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -32,18 +32,11 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Homepage.html">Home</a>
+                    <li class="nav-item"><a class="nav-link" href="../Homepage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../CodingProjects.html">Coding projects</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Resume.html">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="../CodingProjects.html">Coding projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../CaseStudies.html">Case studies</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../CaseStudies.html">Case studies</a></li>
                 </ul>
             </div>
         </div>
@@ -52,61 +45,101 @@
     <!-- HERO / COVER SECTION -->
     <header class="page-hero">
         <div class="container page-container py-5">
-            <button class="btn btn-secondary mb-4" onclick="history.back()">&#8592; Back to coding projects</button>
+            <div class="row align-items-center">
 
-            <div class="row align-items-center g-4">
                 <!-- Text -->
-                <h1 class="display-5 fw-bold ">Regular Expression Interpreter</h1>
+                <div class="col-lg-6">
+                    <button class="btn btn-secondary mb-4" onclick="history.back()">&#8592; Back to coding
+                        projects</button>
 
-                <div class="col-6">
+                    <h1 class="display-5 fw-bold">Regular Expression Interpreter</h1>
                     <p class="lead mt-3">
-                        ...
+                        A Theory of Computation project that parses a regular expression into an Abstract Syntax Tree
+                        (AST) and constructs an equivalent Non-deterministic Finite Automaton (NFA) using Thompson’s
+                        construction. The program also simulates the NFA to test whether input strings are accepted by
+                        the regex language.
                     </p>
 
                     <p class="mb-0">
-                        <strong>Role:</strong> ...<br>
-                        <strong>Team:</strong> ...<br>
-                        <strong>Responsibilities:</strong> ...
+                        <strong>Type:</strong> Individual project<br>
+                        <strong>Core concepts:</strong> parsing (recursive descent), ASTs, Thompson’s construction,
+                        ε-closure simulation<br>
+                        <strong>Regex support:</strong> union (<code>|</code>), concatenation (implicit), Kleene star
+                        (<code>*</code>), grouping (<code>( )</code>), and alphanumeric literals
                     </p>
+
+                    <div class="alert alert-warning mt-4 mb-0" role="alert">
+                        <strong>Note:</strong> The best way to experience this project is to run it locally and try your
+                        own regex + test strings. The demo video and paper below walk through the full workflow.
+                    </div>
                 </div>
 
                 <!-- Hero Carousel -->
-                <div class="col-6">
-                    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div id="heroCarousel" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="9000">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
-                                aria-current="true" aria-label="Slide 1"></button>
+                                aria-current="true" aria-label="AST output"></button>
                             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
+                                aria-label="NFA construction"></button>
                             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
+                                aria-label="Demo video"></button>
                         </div>
 
-                        <div class="carousel-inner">
-                            <!-- Slide 1 -->
+                        <div class="carousel-inner rounded overflow-hidden shadow-sm">
+
+                            <!-- Slide 1: AST (export a screenshot from your presentation or run output) -->
                             <div class="carousel-item active">
-                                <img src="../../Assets/RegularExpressionInterpreter/" class="d-block w-100" alt="...">
+                                <img src="../../Assets/RegularExpressionInterpreter/AST_Output.png"
+                                    class="d-block w-100" alt="AST output example for a regular expression">
                                 <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                                    <h5>...</h5>
-                                    <p>...</p>
+                                    <h5 class="mb-1">AST representation</h5>
+                                    <p class="mb-0">Recursive-descent parsing produces a structured tree for union,
+                                        concat, and star.</p>
                                 </div>
                             </div>
 
-                            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
+                            <!-- Slide 2: NFA (export an image/diagram from your paper/presentation) -->
+                            <div class="carousel-item">
+                                <img src="../../Assets/RegularExpressionInterpreter/NFA_Output.png"
+                                    class="d-block w-100" alt="NFA diagram created via Thompson’s construction">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                                    <h5 class="mb-1">Thompson’s construction</h5>
+                                    <p class="mb-0">Builds an equivalent NFA from the AST using ε-transitions.</p>
+                                </div>
+                            </div>
 
+                            <!-- Slide 3: Demo Video -->
+                            <div class="carousel-item">
+                                <video class="d-block w-100 rounded" controls preload="metadata" playsinline>
+                                    <source src="../../Assets/RegularExpressionInterpreter/ParserDemo.mp4"
+                                        type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                                    <h5 class="mb-1">End-to-end demo</h5>
+                                    <p class="mb-0">Regex → AST → NFA → simulate strings and verify acceptance.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
+
             </div>
+        </div>
     </header>
 
     <!-- MAIN CONTENT -->
@@ -119,47 +152,350 @@
                     <div class="col-md-4">
                         <h2 class="h4">Summary</h2>
                         <p>
-                            ...
+                            This interpreter connects theory to implementation by converting a regex string into an AST,
+                            generating an NFA using Thompson’s construction, and simulating the automaton to determine
+                            whether input strings are accepted.
                         </p>
                     </div>
 
                     <div class="col-md-4">
                         <h2 class="h4">My Role</h2>
-                        <p class="mb-2">
-                            ...
+                        <p>
+                            Individual developer. I designed the parser, implemented Thompson’s construction, built an
+                            interactive menu interface, and created automated tests to validate parsing, NFA generation,
+                            and simulation behavior.
                         </p>
                     </div>
 
                     <div class="col-md-4">
                         <h2 class="h4">The Challenge</h2>
-                        <p>
-                            ....
+                        <p class="mb-0">
+                            The hardest part was building a pipeline where each stage is correct and composable: tokens
+                            → AST structure → Thompson NFA fragments → ε-closure simulation. Small mistakes in parsing
+                            precedence or ε-transition handling can cause the entire language acceptance check to fail.
                         </p>
                     </div>
                 </div>
             </section>
 
-            <!-- BUSINESS APPROACH -->
+            <!-- INTRO / MOTIVATION -->
+            <section class="mb-5" id="motivation">
+                <h2 class="h3 mb-3">Introduction &amp; motivation</h2>
+                <p class="mb-0">
+                    Regular expressions are widely used for searching, validation, and parsing, but their power comes
+                    from formal computation ideas. This project demonstrates how a regex can be treated as a formal
+                    language description and implemented through automata theory; specifically, by building an NFA and
+                    simulating it to recognize strings.
+                </p>
+            </section>
 
-            <!-- STUDY APPROACH -->
-            <section class="mb-5" id="approach">
-                <h2 class="h3 mb-3">Study approach</h2>
+            <!-- THEORY OVERVIEW -->
+            <section class="mb-5" id="theory">
+                <h2 class="h3 mb-3">Theoretical foundations</h2>
 
                 <div class="row g-4">
                     <div class="col-lg-7">
-                        <h3 class="h5">Method</h3>
+                        <h3 class="h5">Key idea</h3>
+                        <p class="mb-3">
+                            Every regular expression corresponds to a regular language, and every regular language can
+                            be recognized by a finite automaton. Thompson’s construction provides a practical algorithm
+                            for converting regex operators into NFA “fragments” connected by ε-transitions.
+                        </p>
 
-                        <h3 class="h5">What we evaluated</h3>
+                        <h3 class="h5">Why NFA (not DFA)</h3>
+                        <ul class="mb-0">
+                            <li>NFAs are simpler to construct directly from regex structure.</li>
+                            <li>ε-transitions make it easy to combine sub-expressions (union, concat, star).</li>
+                            <li>Simulation can be implemented using ε-closures over sets of states.</li>
+                        </ul>
                     </div>
 
-                    <!-- Project artifacts -->
                     <div class="col-lg-5">
                         <div class="p-4 border rounded-3 h-100">
-                            <h3 class="h5">Project artifacts</h3>
-                            <p class="mb-3">
-                                ...
+                            <h3 class="h5">Regex operators supported</h3>
+                            <ul class="mb-0">
+                                <li><strong>Union:</strong> <code>r|s</code></li>
+                                <li><strong>Concatenation:</strong> <code>rs</code> (implicit)</li>
+                                <li><strong>Kleene star:</strong> <code>r*</code></li>
+                                <li><strong>Grouping:</strong> <code>(r)</code></li>
+                                <li><strong>Literals:</strong> alphanumeric characters</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PARSER DESIGN -->
+            <section class="mb-5" id="parser">
+                <h2 class="h3 mb-3">Parser design</h2>
+
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <p class="mb-3">
+                            I implemented a recursive-descent parser to handle operator precedence and grouping. The
+                            parser builds an AST using a small grammar split into four functions
+                            (expression/term/factor/base). This structure makes precedence explicit:
+                            <strong>star</strong> binds tightest, then <strong>concatenation</strong>, then
+                            <strong>union</strong>.
+                        </p>
+
+                        <div class="p-4 border rounded-3">
+                            <h3 class="h5">Grammar (conceptual)</h3>
+                            <ul class="mb-0">
+                                <li><code>expression → term ( '|' expression )?</code></li>
+                                <li><code>term → factor+</code> (until <code>|</code> or <code>)</code>)</li>
+                                <li><code>factor → base ( '*' )?</code></li>
+                                <li><code>base → '(' expression ')' | literal</code></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">AST representation</h3>
+                            <p class="mb-2">
+                                The AST is represented as nested tuples to clearly show structure:
                             </p>
-                            ]
+                            <ul class="mb-0">
+                                <li><code>('Literal', 'a')</code></li>
+                                <li><code>('Star', subtree)</code></li>
+                                <li><code>('Concat', subtree1, subtree2, ...)</code></li>
+                                <li><code>('Union', left, right)</code></li>
+                            </ul>
+                            <p class="small text-muted mt-3 mb-0">
+                                This format makes debugging and explanation easier in demos and tests.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- THOMPSON CONSTRUCTION -->
+            <section class="mb-5" id="thompson">
+                <h2 class="h3 mb-3">Thompson’s construction (AST → NFA)</h2>
+
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <p class="mb-3">
+                            After parsing, the AST is converted into an NFA by recursively constructing NFA fragments
+                            for each operator and connecting them with ε-transitions. Each fragment has a single start
+                            and accept state.
+                        </p>
+
+                        <h3 class="h5">Construction rules</h3>
+                        <ul class="mb-0">
+                            <li><strong>Literal:</strong> create two states with a labeled transition.</li>
+                            <li><strong>Concat:</strong> connect accept of left fragment to start of next fragment via
+                                ε.</li>
+                            <li><strong>Union:</strong> new start ε-splits to each option; each option ε-joins into a
+                                new accept.</li>
+                            <li><strong>Star:</strong> new start/accept with ε-loops to allow zero or more repetitions.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">Why ε-transitions matter</h3>
+                            <p class="mb-0">
+                                ε-transitions allow the automaton to change state without consuming input, which is
+                                essential for composing fragments while preserving correct language behavior, like in
+                                the case of union branching and star repetition.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NFA SIMULATION -->
+            <section class="mb-5" id="simulation">
+                <h2 class="h3 mb-3">NFA simulation</h2>
+
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <p class="mb-3">
+                            The simulator evaluates whether a string is accepted by tracking a set of “current” states
+                            rather than a single state. At each input character, it transitions to the next set of
+                            states and repeatedly expands via ε-closure.
+                        </p>
+
+                        <h3 class="h5">High-level algorithm</h3>
+                        <ol class="mb-0">
+                            <li>Start from ε-closure(start state).</li>
+                            <li>For each character in the input string:
+                                <ul>
+                                    <li>Find all transitions matching the character from current states.</li>
+                                    <li>Move to those destination states.</li>
+                                    <li>Expand via ε-closure again.</li>
+                                </ul>
+                            </li>
+                            <li>Accept if any current state is an accept state at end of input.</li>
+                        </ol>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">What makes this tricky</h3>
+                            <ul class="mb-0">
+                                <li>Correct ε-closure expansion without infinite loops</li>
+                                <li>Maintaining sets of states (not single paths)</li>
+                                <li>Ensuring transitions match parser intent (precedence + grouping)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MENU / UX -->
+            <section class="mb-5" id="menu">
+                <h2 class="h3 mb-3">Interactive menu workflow</h2>
+
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <p class="mb-3">
+                            I built a menu-driven interface so users can interact with each stage of the system: parse a
+                            regex, view the AST, generate an NFA, inspect transitions and states, and simulate test
+                            strings. The goal was to make the computation steps visible and easy to experiment with.
+                        </p>
+
+                        <ul class="mb-0">
+                            <li><strong>Parser mode:</strong> input regex and view AST output</li>
+                            <li><strong>NFA menu:</strong> display/edit NFA, set start/accept states, add transitions
+                            </li>
+                            <li><strong>Simulation:</strong> run test strings and see acceptance results</li>
+                            <li><strong>Combo:</strong> parse + build NFA in one flow</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">Why a menu?</h3>
+                            <p class="mb-0">
+                                The menu supports learning and debugging by exposing each stage as an inspectable
+                                artifact. It turns the project into a tool that demonstrates automata theory rather than
+                                a “black box” converter.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TESTING -->
+            <section class="mb-5" id="testing">
+                <h2 class="h3 mb-3">Testing &amp; validation</h2>
+
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <p class="mb-3">
+                            I used unit tests to validate parsing and NFA behavior across different operator
+                            combinations and edge cases. Testing focused on ensuring that the AST structure matched
+                            expected precedence and that the resulting NFA accepted the correct language.
+                        </p>
+
+                        <ul class="mb-0">
+                            <li>Parsing tests for grouping and precedence (<code>*</code> vs concat vs <code>|</code>)
+                            </li>
+                            <li>NFA acceptance tests using representative strings</li>
+                            <li>Negative tests for invalid input (e.g., unmatched parentheses)</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">Edge cases handled</h3>
+                            <ul class="mb-0">
+                                <li>Empty regex rejected</li>
+                                <li>Unmatched parentheses detected</li>
+                                <li>Unexpected tokens rejected</li>
+                                <li>Alphanumeric literal enforcement</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LIMITATIONS / NEXT -->
+            <section class="mb-5" id="limitations">
+                <h2 class="h3 mb-3">Results, limitations, &amp; next steps</h2>
+
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <h3 class="h5">What works</h3>
+                        <ul class="mb-3">
+                            <li>Reliable parsing for supported operators and grouping</li>
+                            <li>Correct Thompson NFA construction for AST structure</li>
+                            <li>Simulation with ε-closures to validate acceptance</li>
+                        </ul>
+
+                        <h3 class="h5">Current limitations</h3>
+                        <ul class="mb-0">
+                            <li>Literal tokens are restricted to alphanumeric characters</li>
+                            <li>Advanced regex features (character classes, +, ?, escapes) are not implemented</li>
+                            <li>NFA visualization is textual (diagram export would be a strong upgrade)</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">Next improvements</h3>
+                            <ul class="mb-0">
+                                <li>Add additional operators (<code>+</code>, <code>?</code>) and escape handling</li>
+                                <li>Support richer tokens (punctuation, whitespace rules, character classes)</li>
+                                <li>Generate NFA diagrams automatically (Graphviz export)</li>
+                                <li>Expand CLI into a small teaching tool for automata theory</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJECT ARTIFACTS -->
+            <section class="mb-5" id="artifacts">
+                <h2 class="h3 mb-3">Project artifacts</h2>
+
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <p class="mb-3">
+                            These materials document the implementation, theory, and walkthrough:
+                        </p>
+                        <ul class="mb-0">
+                            <li><strong>Final paper:</strong> full technical write-up and design rationale</li>
+                            <li><strong>Presentation + script:</strong> structured walkthrough of the pipeline and
+                                results</li>
+                            <li><strong>Demo video:</strong> live run of parsing, NFA build, and simulation</li>
+                            <li><strong>GitHub repository:</strong> source code and tests</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="p-4 border rounded-3 h-100">
+                            <h3 class="h5">Links</h3>
+                            <p class="mb-3">Open the repo, paper, and demo materials:</p>
+
+                            <div class="d-grid gap-2">
+                                <a class="btn btn-sm btn-outline-secondary"
+                                    href="https://github.com/kive7791/Parser.git" target="_blank" rel="noopener">
+                                    GitHub repository
+                                </a>
+
+                                <a class="btn btn-sm btn-outline-secondary"
+                                    href="../../Assets/RegularExpressionInterpreter/BuildingaRegularExpressionInterpreterPaper.pdf"
+                                    target="_blank" rel="noopener">
+                                    Final paper (PDF)
+                                </a>
+
+                                <a class="btn btn-sm btn-outline-secondary"
+                                    href="../../Assets/RegularExpressionInterpreter/ParserDemo.mp4" target="_blank"
+                                    rel="noopener">
+                                    Demo video
+                                </a>
+
+                                <a class="btn btn-sm btn-outline-secondary"
+                                    href="../../Assets/RegularExpressionInterpreter/PresentationMaterials/FinalPresentation.pptx"
+                                    target="_blank" rel="noopener">
+                                    Final presentation (PPTX)
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -168,9 +504,22 @@
             <!-- REFLECTION -->
             <section class="mb-5" id="reflection">
                 <h2 class="h3 mb-3">Reflection</h2>
+
+                <h3 class="h5">What I learned</h3>
                 <p>
-                    ...
+                    This project strengthened my ability to translate theory into working software. I gained hands-on
+                    experience designing a recursive-descent parser, building an AST, and implementing Thompson’s
+                    construction and ε-closure simulation. The biggest takeaway was learning how small correctness
+                    details like precedence, grouping, and ε-transitions, directly determine whether the implementation
+                    recognizes the intended language.
                 </p>
+
+                <h3 class="h5 mt-3">What I’d do next</h3>
+                <ul class="mb-0">
+                    <li>Add richer token support and more regex operators</li>
+                    <li>Export and visualize NFAs automatically</li>
+                    <li>Expand the menu into a small educational toolkit for automata concepts</li>
+                </ul>
             </section>
 
         </div>
@@ -181,10 +530,7 @@
     </footer>
 
     <!-- Bootstrap JS bundle -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
