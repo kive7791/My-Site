@@ -71,25 +71,8 @@ main .bg-light {
     }
 }
 
-.resume-wrap {
-    max-width: 980px;
-}
-
-.resume-header {
-    border-bottom: 1px solid rgba(255, 255, 255, .15);
-}
-
 .resume-title {
     letter-spacing: .3px;
-}
-
-.resume-meta a {
-    text-decoration: underline;
-}
-
-.resume-meta a:hover {
-    text-decoration: underline;
-    color: var(--c-sand) !important;
 }
 
 .resume-section {
@@ -148,7 +131,7 @@ main .bg-light {
 .pill {
     display: inline-block;
     padding: .15rem .5rem;
-    border: 1px solid rgba(255, 255, 255, .2);
+    border: 1px solid var(--c-border);
     border-radius: 999px;
     font-size: .85rem;
     margin: .2rem .2rem 0 0;

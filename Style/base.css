@@ -83,14 +83,13 @@ p {
 /* Links */
 a {
     color: var(--c-accent);
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a:hover,
 a:focus {
     color: #ff6a43;
     /* lighter hover for accessibility */
-    text-decoration: underline;
 }
 
 /* Strong / emphasis */
